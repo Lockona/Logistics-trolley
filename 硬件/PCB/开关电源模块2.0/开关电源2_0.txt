@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : E:\PCB\开关电源模块2.0\开关电源2_0.PcbDoc
+Date         : 2021/11/6
+Time         : 23:30:08
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 112
+    Connections routed, 112
+    Connections remaining, 0
+count : 4

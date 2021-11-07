@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=main.SchDoc
+Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=主控|SchDesignator=主控|FileName=主控.SchDoc|SymbolType=Normal|RawFileName=主控.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=main.SchDoc|Designator=外围接口|SchDesignator=外围接口|FileName=外围接口.SchDoc|SymbolType=Normal|RawFileName=外围接口.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

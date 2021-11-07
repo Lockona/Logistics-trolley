@@ -1,0 +1,29 @@
+Added Component: Designator=U1(WIFIM-SMD_ESP32-C3S-2M)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=VCC_3V3 Pin=U1-2
+Added Pin To Net: NetName=EN Pin=U1-3
+Added Pin To Net: NetName=GPIO0 Pin=U1-5
+Added Pin To Net: NetName=GPIO1 Pin=U1-6
+Added Pin To Net: NetName=GPIO2 Pin=U1-7
+Added Pin To Net: NetName=GPIO3 Pin=U1-8
+Added Pin To Net: NetName=CAN_Rx Pin=U1-9
+Added Pin To Net: NetName=CAN_Tx Pin=U1-10
+Added Pin To Net: NetName=GPIO6 Pin=U1-11
+Added Pin To Net: NetName=GPIO7 Pin=U1-12
+Added Pin To Net: NetName=GPIO8 Pin=U1-13
+Added Pin To Net: NetName=GPIO10 Pin=U1-14
+Added Pin To Net: NetName=GND Pin=U1-15
+Added Pin To Net: NetName=SPIHD Pin=U1-17
+Added Pin To Net: NetName=SPIWP Pin=U1-18
+Added Pin To Net: NetName=SPICS0 Pin=U1-19
+Added Pin To Net: NetName=SPICLK Pin=U1-20
+Added Pin To Net: NetName=SPIQ Pin=U1-21
+Added Pin To Net: NetName=SPID Pin=U1-22
+Added Pin To Net: NetName=GPIO9 Pin=U1-25
+Added Pin To Net: NetName=MPU_SCL Pin=U1-30
+Added Pin To Net: NetName=MPU_SDA Pin=U1-31
+Added Pin To Net: NetName=CP_Tx Pin=U1-34
+Added Pin To Net: NetName=CP_Rx Pin=U1-35
+Added Pin To Net: NetName=GND Pin=U1-38
+Added Member To Class: ClassName=main Member=Component U1 ESP32-C3S-2M

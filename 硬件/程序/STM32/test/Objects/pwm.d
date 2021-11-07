@@ -1,0 +1,17 @@
+.\objects\pwm.o: USER\pwm.c
+.\objects\pwm.o: USER\pwm.h
+.\objects\pwm.o: .\CMSIS\stm32f10x.h
+.\objects\pwm.o: .\CMSIS\core_cm3.h
+.\objects\pwm.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\pwm.o: .\CMSIS\system_stm32f10x.h
+.\objects\pwm.o: .\USER\stm32f10x_conf.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\pwm.o: .\CMSIS\stm32f10x.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_gpio.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_i2c.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_rcc.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_spi.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_tim.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_usart.h
+.\objects\pwm.o: .\FWLIB\inc\stm32f10x_wwdg.h
+.\objects\pwm.o: .\FWLIB\inc\misc.h

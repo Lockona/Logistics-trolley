@@ -1,0 +1,20 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "E:/esp-idf/components/bootloader/subproject",
+    "build_dir":          "E:/ESP32/test/build/bootloader",
+    "config_file":        "E:/ESP32/test/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v4.3-dirty",
+    "target":             "esp32c3",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "riscv32-esp-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "E:/esp-idf/components/efuse/Kconfig;E:/esp-idf/components/esp32c3/Kconfig;E:/esp-idf/components/esp_common/Kconfig;E:/esp-idf/components/esp_system/Kconfig;E:/esp-idf/components/log/Kconfig;E:/esp-idf/components/newlib/Kconfig;E:/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "E:/esp-idf/components/bootloader/Kconfig.projbuild;E:/esp-idf/components/esptool_py/Kconfig.projbuild;E:/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32c3", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "riscv", "soc", "spi_flash", "" ],
+    "build_component_paths" : [ "E:/esp-idf/components/bootloader", "E:/esp-idf/components/bootloader_support", "E:/esp-idf/components/efuse", "E:/esp-idf/components/esp32c3", "E:/esp-idf/components/esp_common", "E:/esp-idf/components/esp_hw_support", "E:/esp-idf/components/esp_rom", "E:/esp-idf/components/esp_system", "E:/esp-idf/components/esptool_py", "E:/esp-idf/components/hal", "E:/esp-idf/components/log", "E:/esp-idf/components/bootloader/subproject/main", "E:/esp-idf/components/bootloader/subproject/components/micro-ecc", "E:/esp-idf/components/newlib", "E:/esp-idf/components/partition_table", "E:/esp-idf/components/riscv", "E:/esp-idf/components/soc", "E:/esp-idf/components/spi_flash", "" ]
+}
