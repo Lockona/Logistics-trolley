@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/board.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/board.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/can.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/can.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/delay.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/delay.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/encoder.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/encoder.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/main.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/main.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/misc.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/misc.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/oled_spi.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/oled_spi.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_can.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_can.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_it.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_it.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_tim.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_tim.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_usart.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/stm32f10x_usart.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/system_stm32f10x.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/system_stm32f10x.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/usart1.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/Objects/usart1.crf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/stm32f10x_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/USER/stm32f10x_conf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvguix.Kero" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvguix.Kero" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvoptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../硬件/程序/STM32/test/test.uvprojx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="20qAD5vI7KnIRorgTSqjhdY7Jqh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="" />
+      <created>1636761622136</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636761622136</updated>
+    </task>
+    <servers />
+  </component>
+</project>

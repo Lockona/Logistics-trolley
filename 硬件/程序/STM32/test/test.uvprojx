@@ -196,7 +196,7 @@
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
-            <OptFeed>1</OptFeed>
+            <OptFeed>0</OptFeed>
             <NoZi1>0</NoZi1>
             <NoZi2>0</NoZi2>
             <NoZi3>0</NoZi3>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -433,6 +433,11 @@
               <FileType>1</FileType>
               <FilePath>.\FWLIB\src\stm32f10x_can.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>E:\STM32\test\FWLIB\src\stm32f10x_exti.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -482,6 +487,11 @@
               <FileName>board.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\USER\board.c</FilePath>
+            </File>
+            <File>
+              <FileName>sr04.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USER\sr04.c</FilePath>
             </File>
           </Files>
         </Group>
