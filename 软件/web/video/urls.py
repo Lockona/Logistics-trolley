@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from video.views import test, index
+from video.views import video, index
 
 urlpatterns = [
     path('', index),
-    path('video', test)
+    path('video', video)
 ]

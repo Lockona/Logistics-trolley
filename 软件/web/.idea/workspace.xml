@@ -2,37 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/aiwrap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pic/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pic/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pic/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/board.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/board.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/can.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/can.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/delay.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/delay.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/encoder.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/encoder.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/misc.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/misc.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/oled_spi.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/oled_spi.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_can.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_can.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_it.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_it.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_tim.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_tim.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_usart.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_usart.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/system_stm32f10x.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/system_stm32f10x.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/usart1.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/usart1.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/stm32f10x_conf.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/stm32f10x_conf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvoptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvprojx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +25,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="E:/python/StudentManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Logistics-trolley\软件\web\video" />
       <recent name="G:\Logistics-trolley\软件\web\templates" />
+      <recent name="G:\Logistics-trolley\软件\web\video" />
       <recent name="G:\Logistics-trolley\软件\web\static" />
     </key>
   </component>
@@ -81,16 +55,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/video/urls.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
