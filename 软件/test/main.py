@@ -18,7 +18,7 @@ def test():
 
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = socket.gethostname()
+host = '192.168.137.1'
 port = 5001
 client.connect((host, port))
 g = test()

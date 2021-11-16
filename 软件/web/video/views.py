@@ -37,8 +37,8 @@ class mythread(threading.Thread):
         threading.Thread.is_alive(self)
 
 
-host = socket.gethostname()
-port = 5001
+host = '192.168.137.1'
+port = 5000
 m = mythread(host, port)
 
 
@@ -53,11 +53,12 @@ def test():
         try:
             if start_flag:
                 size = client.recv(8)
+                time.sleep(0.005)
+                print(size)
                 try:
                     size = int(size)
                 except ValueError or TypeError:
                     pass
-                time.sleep(0.1)
                 ret = client.recv(size)
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpeg\r\n\r\n' + ret)

@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/../test/.idea/test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/5V输出.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出1.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Listings/test.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Listings/test.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.axf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.axf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test_Target 1.dep" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test_Target 1.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
