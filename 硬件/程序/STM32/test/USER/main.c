@@ -20,7 +20,7 @@ rt_thread_t can_recv_task = RT_NULL;
 int main()
 {
 	rt_enter_critical();
-	sr04_Init();
+//	sr04_Init();
 	wheel_flag_sem = rt_sem_create("wheel_flag", 0, RT_IPC_FLAG_FIFO);
 	can_recv_sem = rt_sem_create("can_rcv", 0, RT_IPC_FLAG_FIFO);
 	angle_sem = rt_sem_create("angle", 0, RT_IPC_FLAG_FIFO);
@@ -45,7 +45,7 @@ int main()
 	while (1)
 	{
 		//		sprintf(buf, "%d", i);
-		get_distan();
+//		get_distan();
 		rt_thread_delay(500);
 		//		CAN_Send_MSG(&i);
 		//		CAN_Receive(CAN1,CAN_FIFO1,&data);
