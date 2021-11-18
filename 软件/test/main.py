@@ -1,7 +1,7 @@
 import os
 import time
 import socket
-import json
+import base64
 
 
 def test():
@@ -18,10 +18,10 @@ def test():
 
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-host = '192.168.137.1'
+host = socket.gethostname()
+# host = '192.168.137.1'
 port = 5001
 client.connect((host, port))
-g = test()
 try:
     while True:
         for root, dirs, files in os.walk("F:\\飞鸟"):
@@ -30,8 +30,10 @@ try:
                 with open(str0, 'rb') as f:
                     size = os.path.getsize(str0)
                     ret = f.read(size)
-                client.send(str(size).encode())
-                time.sleep(0.2)
+                    ret = b'image:' + ret + b'end!'
+                    # ret = base64.b64encode(ret)
                 client.send(ret)
+                time.sleep(0.2)
+                # client.send(ret)
 except socket.error:
     client.close()

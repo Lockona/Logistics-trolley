@@ -167,7 +167,6 @@ void testCam()
              "model/yolo-fastest-1.1.bin");
 
     cv::Mat frame;
-    char buff[10];
     std::vector<TargetBox> output;
 
     std::vector<int> param = std::vector<int>(2);
@@ -216,9 +215,6 @@ void testCam()
         if (fd > 0)
         {
             cv::imencode(".jpg", frame, buffer, param);
-            sprintf(buff, "%08d", buffer.size());
-            send(fd, buff, 8, 0);
-            cv::waitKey(1);
             send(fd, &buffer[0], buffer.size(), 0);
         }
         //cv::imshow("demo", frame);
@@ -259,8 +255,10 @@ int main(int argc, char **argv)
     // pthread_create(&w_pid, NULL, com_input, NULL);
     // pthread_create(&cam_pid, NULL, testCam, NULL);
     struct sockaddr_in seraddr;
+    int nSendBuf = 150 * 1024;
     memset(&seraddr, 0, sizeof(struct sockaddr));
     fd = socket(AF_INET, SOCK_STREAM, 0);
+    setsockopt(fd, SOL_SOCKET, SO_SNDBUF, (const char *)&nSendBuf, sizeof(int));
     seraddr.sin_family = AF_INET;
     seraddr.sin_port = htons(atoi(argv[1]));
     seraddr.sin_addr.s_addr = inet_addr("192.168.137.1");
