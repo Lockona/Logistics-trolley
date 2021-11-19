@@ -21,9 +21,9 @@ class mythread(threading.Thread):
         threading.Thread.__init__(self)
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server.bind((host, port))
-        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
-        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, 1000)
+        # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
+        # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, 1000)
 
     def run(self) -> None:
         global client, start_flag
@@ -31,6 +31,8 @@ class mythread(threading.Thread):
         while True:
             try:
                 client, addr = self.server.accept()
+                client.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
+                client.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                 start_flag = True
             except socket.error:
                 client.close()
@@ -43,7 +45,7 @@ class mythread(threading.Thread):
 
 # host = socket.gethostname()
 host = '192.168.137.1'
-port = 5002
+port = 5000
 m = mythread(host, port)
 
 
@@ -70,38 +72,20 @@ def test():
                 #         else:
                 #             ret = ret + t[:tail]
                 #             break
-                # t = client.recv(120 * 1024)
-                # ret = t
-                # while len(ret) < 120 * 1024:
-                #     t = client.recv(120 * 1024)
-                #     ret = ret + t
-                # head = ret.find(b'\xff\xd8')
-                # tail = ret.find(b'\xff\xd9')
-                # if head != -1:
-                #     ret = t[head:-1]
-                # elif tail == -1:
-                #     ret = ret + t
-                # else:
-                #     ret = ret + t[:tail + 2]
-                #     break
-                # if tail != -1:
-                #     ret = ret[:tail+2]
-                #     break
+
                 while True:
-                    t = client.recv(120 * 1024)
-                    head = t.find(b'\xff\xd8')
-                    tail = t.find(b'\xff\xd9')
-                    if head != -1:
-                        ret = t[head:-1]
-                    elif tail == -1:
-                        ret = ret + t
+                    t = client.recv(1024)
+                    if (t[0] == 0xff) and (t[1] == 0xd8):
+                        ret = t
                     else:
-                        ret = ret + t[:tail + 2]
-                        break
-                    if tail != -1:
-                        ret = ret[:tail+2]
-                        break
-                time.sleep(0.01)
+                        tail = len(t)
+                        ret = ret + t
+                        if (t[tail - 2] == 0xff) and (t[tail - 1] == 0xd9):
+                            break
+
+                # with open("1.jpg", 'wb') as f:
+                #     f.write(ret)
+                #     f.close()
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpg\r\n\r\n' + ret)
         except socket.error:

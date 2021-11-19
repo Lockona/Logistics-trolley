@@ -215,10 +215,22 @@ void testCam()
         if (fd > 0)
         {
             cv::imencode(".jpg", frame, buffer, param);
-            send(fd, &buffer[0], buffer.size(), 0);
+            // send(fd, &buffer[0], buffer.size(), 0);
+            int size = buffer.size();
+            int i = 0;
+            while ((size - i) >= 1024)
+            {
+                send(fd, &buffer[i], 1024, 0);
+                i += 1024;
+            }
+            size = size - i;
+            if (size > 0)
+            {
+                send(fd, &buffer[i], size, 0);
+            }
         }
         //cv::imshow("demo", frame);
-        cv::waitKey(10);
+        cv::waitKey(15);
     }
 
     cap.release(); //释放资源

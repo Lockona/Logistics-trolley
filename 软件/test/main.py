@@ -19,8 +19,7 @@ def test():
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostname()
-# host = '192.168.137.1'
-port = 5001
+port = 5002
 client.connect((host, port))
 try:
     while True:
@@ -30,9 +29,17 @@ try:
                 with open(str0, 'rb') as f:
                     size = os.path.getsize(str0)
                     ret = f.read(size)
-                    ret = b'image:' + ret + b'end!'
-                    # ret = base64.b64encode(ret)
+                # client.send(str(size).encode())
+                # time.sleep(0.2)
+                ret = b'image:' + ret + b'end!'
+                # ret = base64.b64encode(ret)
                 client.send(ret)
+                # while size > 0:
+                #     t = ret[:1024]
+                #     i = client.send(t)
+                #     print(i)
+                #     ret = ret[i:-1]
+                #     size = size - i
                 time.sleep(0.2)
                 # client.send(ret)
 except socket.error:
