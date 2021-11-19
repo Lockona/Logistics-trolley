@@ -45,7 +45,7 @@ class mythread(threading.Thread):
 
 # host = socket.gethostname()
 host = '192.168.137.1'
-port = 5000
+port = 5002
 m = mythread(host, port)
 
 
@@ -77,11 +77,13 @@ def test():
                     t = client.recv(1024)
                     if (t[0] == 0xff) and (t[1] == 0xd8):
                         ret = t
-                    else:
-                        tail = len(t)
-                        ret = ret + t
-                        if (t[tail - 2] == 0xff) and (t[tail - 1] == 0xd9):
-                            break
+                        break
+                while True:
+                    t = client.recv(1024)
+                    tail = len(t)
+                    ret = ret + t
+                    if (t[tail - 2] == 0xff) and (t[tail - 1] == 0xd9):
+                        break
 
                 # with open("1.jpg", 'wb') as f:
                 #     f.write(ret)

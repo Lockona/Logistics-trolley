@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/../test/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../test/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
