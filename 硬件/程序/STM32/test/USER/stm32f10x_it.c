@@ -142,6 +142,8 @@ void TIM1_UP_IRQHandler(void)
       catch_time = 0;
       L_Pulse = TIM2->CNT;
       R_Pulse = TIM3->CNT;
+		L_Pulse = (L_Pulse>0)?(L_Pulse):(L_Pulse*-1);
+		R_Pulse = (R_Pulse>0)?(R_Pulse):(R_Pulse*-1);
       TIM2->CNT = 0;
       TIM3->CNT = 0;
       rt_sem_release(wheel_flag_sem);

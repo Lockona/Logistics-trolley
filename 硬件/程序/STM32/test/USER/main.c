@@ -27,8 +27,8 @@ int main()
 	speed_mq = rt_mq_create("speed", sizeof(rt_uint16_t), 10, RT_IPC_FLAG_FIFO);
 
 	can_recv_task = rt_thread_create("can_rcv_thread", can_recv_to_ctrl, RT_NULL, 1024, 5, 20);
-	wheel_task = rt_thread_create("wheel_task", wheel_ctrl_task, RT_NULL, 1024, 7, 20);
-	setAngle_task = rt_thread_create("setAngle", setAngle, RT_NULL, 1024, 6, 20);
+	wheel_task = rt_thread_create("wheel_task", wheel_ctrl_task, RT_NULL, 1024*2, 6, 20);
+	setAngle_task = rt_thread_create("setAngle", setAngle, RT_NULL, 1024, 7, 20);
 	if (can_recv_task != RT_NULL)
 	{
 		rt_thread_startup(can_recv_task);
@@ -46,7 +46,7 @@ int main()
 	{
 		//		sprintf(buf, "%d", i);
 //		get_distan();
-		rt_thread_delay(500);
+		rt_thread_delay(5000);
 		//		CAN_Send_MSG(&i);
 		//		CAN_Receive(CAN1,CAN_FIFO1,&data);
 	}

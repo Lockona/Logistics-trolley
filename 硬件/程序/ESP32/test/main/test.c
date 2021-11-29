@@ -122,6 +122,7 @@ static void do_retransmit(const int sock)
             switch (rx_buffer[0])
             {
             case 'M':
+                move_msg.type = 'M';
                 val_int = atoi(&rx_buffer[1]);
                 move_heading_flag = (val_int >= 0) ? 1 : -1;
                 start_flag = (val_int != 0) ? 1 : 0;
@@ -139,16 +140,20 @@ static void do_retransmit(const int sock)
                 xQueueSend(angle_queue, &val_f, 0);
                 break;
             case 'P':
-                val_int = atoi(&rx_buffer[1]);
-                angle_pid.KP = val_int;
+                ESP_LOGI(TAG, "S");
+                move_msg.type = 'P';
+                strcpy(move_msg.msg, &rx_buffer[1]);
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'I':
-                val_f = atof(&rx_buffer[1]);
-                angle_pid.KI = val_f;
+                move_msg.type = 'I';
+                strcpy(move_msg.msg, &rx_buffer[1]);
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'D':
-                val_int = atoi(&rx_buffer[1]);
-                angle_pid.KD = val_int;
+                move_msg.type = 'D';
+                strcpy(move_msg.msg, &rx_buffer[1]);
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             }
         }

@@ -59,6 +59,7 @@ void Can_Init(void)
 void can_recv_to_ctrl(void *param)
 {
     rt_int16_t val = 0;
+	float i = 0;
     while (1)
     {
         if (rt_sem_take(can_recv_sem, RT_WAITING_FOREVER) == RT_EOK)
@@ -73,13 +74,47 @@ void can_recv_to_ctrl(void *param)
 				l_pid_val.new_error = 0;
 				l_pid_val.sum_error = 0;
                 expect_speed = atoi((char *)recv_data.Data);
-			
+				if (expect_speed> 0)
+				{
+					GPIOA->ODR |= (1 << 4);
+					GPIOA->ODR &= ~(1 << 5);	  
+					GPIOB->ODR |= (1 << 15);
+					GPIOB->ODR &= ~(1 << 14);
+				}
+				else if(expect_speed < 0)
+				{
+					GPIOA->ODR |= (1 << 5);
+					GPIOA->ODR &= ~(1 << 4);
+					GPIOB->ODR |= (1 << 14);
+					GPIOB->ODR &= ~(1 << 15);
+					expect_speed = expect_speed * -1;
+				}
+				else
+				{
+					GPIOA->ODR |= (3 << 4);
+					GPIOB->ODR |= (3 << 14);
+				}
                 //rt_mq_send(speed_mq, &val, sizeof(rt_int16_t));
                 break;
             case 'A':
                 val = atoi((char *)recv_data.Data);
 				angle = val;
                 rt_sem_release(angle_sem);
+                break;
+			 case 'P':
+                val = atoi((char *)recv_data.Data);
+				r_pid_val.KP = val;
+				l_pid_val.KP = val;
+                break;
+            case 'I':
+				i = atof((char *)recv_data.Data);
+				r_pid_val.KI = i;
+				l_pid_val.KI = i;
+                break;
+            case 'D':
+				val = atoi((char *)recv_data.Data);
+				r_pid_val.KD = val;
+				l_pid_val.KD = val;
                 break;
             }
         }

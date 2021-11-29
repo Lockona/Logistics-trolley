@@ -12,8 +12,8 @@
 //#define speed 20
 
 //struct 	Inc_pid l_pid_val = {0.5,20,0,10, 0, 0};
-struct position_pid r_pid_val = {80, 0.5, 5, 0, 0, 0};
-struct position_pid l_pid_val = {80, 0.5, 5, 0, 0, 0};
+struct position_pid r_pid_val = {100, 0.5, 5, 0, 0, 0};
+struct position_pid l_pid_val = {100, 0.5, 5, 0, 0, 0};
 
 rt_int16_t expect_speed = 0;
 
@@ -85,105 +85,92 @@ void MOTOR_GPIO_Init(void)
     GPIOB->ODR |= (3 << 14);
 }
 
-void left_wheel_ctrl(int16_t pwm)
+__inline void left_wheel_ctrl(int16_t pwm)
 {
     if (pwm > 0)
     {
-        GPIOA->ODR |= (1 << 12);
-        GPIOB->ODR |= (1 << 15);
-        GPIOB->ODR &= ~(1 << 14);
         TIM1->CCR4 = pwm;
     }
-    else if (pwm < 0)
+    else if(pwm <= 0)
     {
-        GPIOA->ODR |= (1 << 12);
-        GPIOB->ODR |= (1 << 14);
-        GPIOB->ODR &= ~(1 << 15);
-        TIM1->CCR4 = pwm * -1;
-    }
-    else
-    {
-        TIM1->CCR4 = pwm;
+        TIM1->CCR4 = 0;
     }
 }
-void right_wheel_ctrl(int16_t pwm)
+__inline void right_wheel_ctrl(int16_t pwm)
 {
     if (pwm > 0)
     {
-        GPIOA->ODR |= (1 << 4) | (1 << 12);
-        GPIOA->ODR &= ~(1 << 5);
         TIM1->CCR1 = pwm;
     }
-    else if (pwm < 0)
+    else if(pwm <= 0)
     {
-        GPIOA->ODR |= (1 << 5) | (1 << 12);
-        GPIOA->ODR &= ~(1 << 4);
-        TIM1->CCR1 = pwm * -1;
-    }
-    else
-    {
-        TIM1->CCR1 = pwm;
+        TIM1->CCR1 = 0;
     }
 }
 
+
 void stop(void)
 {
-    GPIOA->ODR |= (3 << 4);
-    GPIOB->ODR |= (3 << 14);
-    GPIOA->ODR &= ~(1 << 12);
+	TIM1->CCR1 = 0;
+	TIM1->CCR4 = 0;
 }
 
 void wheel_ctrl_task(void *param)
 {
     rt_int16_t pwm_r = 0,pwm_l = 0;
     float err = 0, sum_error, right_wheel_real_speed = 0,left_wheel_real_speed = 0;
-    float last_speed = 0;
+    float last_speed_l = 0, last_speed_r = 0,p;
     while (1)
     {
 //        rt_mq_recv(speed_mq, &expect_speed, sizeof(rt_int16_t), 0);
         if (rt_sem_take(wheel_flag_sem, RT_WAITING_FOREVER) == RT_EOK)
         {
+		
             right_wheel_real_speed = ((3.14 * 6.5) / 800) * R_Pulse * 100;
             r_pid_val.new_error = expect_speed - right_wheel_real_speed;
-            //			err = r_pid_val.new_error - r_pid_val.old_error;
-            err = right_wheel_real_speed - last_speed;
-            last_speed = right_wheel_real_speed;
-            if (r_pid_val.new_error > (expect_speed * 0.6) || r_pid_val.new_error < -(expect_speed * 0.6))
+//            			err = r_pid_val.new_error - r_pid_val.old_error;
+            err = right_wheel_real_speed - last_speed_r;
+            last_speed_r = right_wheel_real_speed;
+            if ((r_pid_val.new_error > (expect_speed * 0.5)) || (r_pid_val.new_error < -(expect_speed * 0.5)))
             {
-                r_pid_val.KP = 100;
+                p = r_pid_val.KP;
                 sum_error = 0;
             }
             else
             {
-                r_pid_val.KP = 1;
+                p = 1;
                 r_pid_val.sum_error += r_pid_val.new_error;
                 sum_error = r_pid_val.sum_error;
             }
-            pwm_r = (int)(r_pid_val.KP * r_pid_val.new_error + r_pid_val.KI * sum_error + r_pid_val.KD * err);
+            pwm_r = (int)(p * r_pid_val.new_error + r_pid_val.KI * sum_error + r_pid_val.KD * err);
+			
+			right_wheel_ctrl(pwm_r);
 			
 			left_wheel_real_speed = ((3.14 * 6.5) / 800) * L_Pulse * 100;
             l_pid_val.new_error = expect_speed - left_wheel_real_speed;
-            //			err = l_pid_val.new_error - l_pid_val.old_error;
-            err = left_wheel_real_speed - last_speed;
-            last_speed = left_wheel_real_speed;
-            if (l_pid_val.new_error > (expect_speed * 0.6) || l_pid_val.new_error < -(expect_speed * 0.6))
+//            			err = l_pid_val.new_error - l_pid_val.old_error;
+            err = left_wheel_real_speed - last_speed_l;
+            last_speed_l = left_wheel_real_speed;
+            if ((l_pid_val.new_error > (expect_speed * 0.5)) || (l_pid_val.new_error < -(expect_speed * 0.5)))
             {
-                l_pid_val.KP = 100;
+                p = l_pid_val.KP;
                 sum_error = 0;
             }
             else
             {
-                l_pid_val.KP = 1;
+                p = 1;
                 l_pid_val.sum_error += l_pid_val.new_error;
                 sum_error = l_pid_val.sum_error;
             }
-            pwm_l = (int)(l_pid_val.KP * l_pid_val.new_error + l_pid_val.KI * sum_error + l_pid_val.KD * err); 
-            left_wheel_ctrl(pwm_l);
-			right_wheel_ctrl(pwm_r);	
-	
+            pwm_l = (int)(p * l_pid_val.new_error + l_pid_val.KI * sum_error + l_pid_val.KD * err); 
+			
+			left_wheel_ctrl(pwm_l);
+			
             l_pid_val.old_error = l_pid_val.new_error;
             r_pid_val.old_error = r_pid_val.new_error;
-
+			
+				
+			
             //			while(!(USART1->SR&(0x01<<7)))
             //				;
             //			USART1->DR = (L_Pulse+R_Pulse)/2;
