@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=D- Pin=P4-2
+Removed Pin From Net: NetName=TXD Pin=P4-3
+Removed Pin From Net: NetName=RXD Pin=P4-4
+Removed Pin From Net: NetName=QX_D+ Pin=P5-1
+Removed Pin From Net: NetName=QX_D- Pin=P5-2
+Removed Pin From Net: NetName=QX_TXD Pin=P5-3
+Removed Pin From Net: NetName=QX_RXD Pin=P5-4
+Removed Member From Class: ClassName=main Member=P5
+Change Component Footprint: Designator=P4 Old Footprint=HDR1X4 New Footprint=HDR2X4
+Change Component Comment : Designator=P4 Old Comment=Header 4 New Comment=Header 4X2
+Added Pin To Net: NetName=QX_D+ Pin=P4-2
+Added Pin To Net: NetName=D- Pin=P4-3
+Added Pin To Net: NetName=QX_D- Pin=P4-4
+Added Pin To Net: NetName=TXD Pin=P4-5
+Added Pin To Net: NetName=QX_TXD Pin=P4-6
+Added Pin To Net: NetName=RXD Pin=P4-7
+Added Pin To Net: NetName=QX_RXD Pin=P4-8
+Added Room: Name=main

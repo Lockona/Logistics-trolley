@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : G:\Logistics-trolley\Ó²¼þ\PCB\Ê÷Ý®ÅÉUSBÀ©Õ¹°å\Ê÷Ý®ÅÉUSBÀ©Õ¹°å.PcbDoc
+Date         : 2021/11/30
+Time         : 21:20:19
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 36
+    Connections routed, 36
+    Connections remaining, 0
+count : 4

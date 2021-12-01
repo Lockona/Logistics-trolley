@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=D+ Pin=P4-1
+Removed Pin From Net: NetName=QX_D+ Pin=P4-2
+Removed Pin From Net: NetName=D- Pin=P4-3
+Removed Pin From Net: NetName=QX_D- Pin=P4-4
+Removed Pin From Net: NetName=TXD Pin=P4-5
+Removed Pin From Net: NetName=QX_TXD Pin=P4-6
+Removed Pin From Net: NetName=RXD Pin=P4-7
+Removed Pin From Net: NetName=QX_RXD Pin=P4-8
+Added Pin To Net: NetName=TXD Pin=P4-1
+Added Pin To Net: NetName=QX_TXD Pin=P4-2
+Added Pin To Net: NetName=RXD Pin=P4-3
+Added Pin To Net: NetName=QX_RXD Pin=P4-4
+Added Pin To Net: NetName=D+ Pin=P4-5
+Added Pin To Net: NetName=QX_D+ Pin=P4-6
+Added Pin To Net: NetName=D- Pin=P4-7
+Added Pin To Net: NetName=QX_D- Pin=P4-8
+Added Room: Name=main

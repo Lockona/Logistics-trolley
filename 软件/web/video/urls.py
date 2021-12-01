@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from video.views import video, index
+from video.views import *
 
 urlpatterns = [
-    path('', index),
-    path('video', video)
+    path('', login),
+    path('index', index),
+    path('welcome', welcome),
+    path('video', video),
+    path('order-list', order_list)
 ]

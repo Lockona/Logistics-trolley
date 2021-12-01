@@ -1,0 +1,26 @@
+Added Component: Designator=C1(R0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(SOIC-16_L9.9-W3.9-P1.27-LS6.0-BL)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Y1(OSC-SMD_L11.4-W4.5-LS12.5)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=TXD Pin=U1-2
+Added Pin To Net: NetName=RXD Pin=U1-3
+Added Pin To Net: NetName=NetC1_2 Pin=U1-4
+Added Pin To Net: NetName=D+ Pin=U1-5
+Added Pin To Net: NetName=D- Pin=U1-6
+Added Pin To Net: NetName=NetC2_2 Pin=U1-7
+Added Pin To Net: NetName=NetC3_2 Pin=U1-8
+Added Pin To Net: NetName=5V Pin=U1-16
+Added Pin To Net: NetName=NetC2_2 Pin=Y1-1
+Added Pin To Net: NetName=NetC3_2 Pin=Y1-2
+Added Member To Class: ClassName=main Member=Component C1 104
+Added Member To Class: ClassName=main Member=Component U1 CH340G
+Added Member To Class: ClassName=main Member=Component Y1 12MHz

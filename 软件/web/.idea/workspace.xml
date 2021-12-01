@@ -2,51 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Listings/test.map" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Listings/test.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/board.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/board.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/can.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/can.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/clock.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/clock.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/components.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/components.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/core_cm3.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/core_cm3.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/cpuport.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/cpuport.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/delay.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/delay.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/device.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/device.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/encoder.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/encoder.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/idle.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/idle.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/ipc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/ipc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/irq.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/irq.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/kservice.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/kservice.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/mem.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/mem.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/memheap.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/memheap.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/mempool.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/mempool.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/misc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/misc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.crf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/motor_ctrl.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/object.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/object.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/oled_spi.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/oled_spi.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/scheduler.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/scheduler.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/signal.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/signal.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/sr04.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/sr04.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_can.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_can.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_exti.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_exti.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_gpio.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_it.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_it.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_rcc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_tim.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_tim.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_usart.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/stm32f10x_usart.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/system_stm32f10x.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/system_stm32f10x.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.axf" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.axf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.build_log.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.build_log.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.hex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.htm" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test_Target 1.dep" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/test_Target 1.dep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/thread.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/thread.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/timer.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/timer.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/usart1.o" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/Objects/usart1.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/motor_ctrl.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/USER/motor_ctrl.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/程序/STM32/test/test.uvguix.Kero" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/order-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/History/开关电源2_0.~(10).PcbDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出2.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出2.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/开关电源2_0.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/开关电源2_0.PcbDoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="E:/python/StudentManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
