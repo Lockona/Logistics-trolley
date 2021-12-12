@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<document type="BLUMIND" editor_version="3.2.902.24361" document_version="3.0.0.0">
+  <!--Create by Blumind, you can download it free from http://www.blumind.org-->
+  <information>
+    <author>Kero</author>
+    <company>
+    </company>
+    <version>3.0</version>
+    <description>
+    </description>
+  </information>
+  <attributes>
+    <item name="editor_show_sidebar">True</item>
+  </attributes>
+  <charts active_chart="0">
+    <chart name="新页面 1" type="MindMap">
+      <remark>
+      </remark>
+      <layout>MIND_MAP</layout>
+      <style>
+        <back_color>White</back_color>
+        <fore_color>Black</fore_color>
+        <line_color>LightSlateGray</line_color>
+        <border_color>SlateGray</border_color>
+        <node_back_color>LightGray</node_back_color>
+        <node_fore_color>Black</node_fore_color>
+        <select_color>RoyalBlue</select_color>
+        <hover_color>MediumSlateBlue</hover_color>
+        <link_line_color>Green</link_line_color>
+        <widget_margin>1</widget_margin>
+        <picture_thumb_size>100, 100</picture_thumb_size>
+      </style>
+      <nodes>
+        <node id="1" text="物流小车" x="474" y="364" width="78" height="41" text_b="12, 12, 54, 17">
+          <style>
+            <back_color>Silver</back_color>
+            <fore_color>Black</fore_color>
+            <border_color>Black</border_color>
+            <padding>12</padding>
+          </style>
+          <nodes>
+            <node id="2" text="服务器" x="348" y="271" width="46" height="21" text_b="2, 2, 42, 17" fold_btn_b="334, 275, 13, 13">
+              <nodes>
+                <node id="17" text="WEB网页" x="208" y="271" width="60" height="21" text_b="2, 2, 56, 17" fold_btn_b="194, 275, 13, 13">
+                  <nodes>
+                    <node id="1" text="显示货物状态" x="45" y="240" width="83" height="21" text_b="2, 2, 79, 17" />
+                    <node id="2" text="显示货物信息" x="45" y="271" width="83" height="21" text_b="2, 2, 79, 17" />
+                    <node id="24" text="显示摄像头画面" x="33" y="302" width="95" height="21" text_b="2, 2, 91, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="1" begin_side="Left" end_side="Right" begin_rect="195, 271, 73, 21" end_rect="45, 240, 83, 21" />
+                    <line target="2" begin_side="Left" end_side="Right" begin_rect="195, 271, 73, 21" end_rect="45, 271, 83, 21" />
+                    <line target="24" begin_side="Left" end_side="Right" begin_rect="195, 271, 73, 21" end_rect="33, 302, 95, 21" />
+                  </lines>
+                </node>
+              </nodes>
+              <lines>
+                <line target="17" begin_side="Left" end_side="Right" begin_rect="335, 271, 59, 21" end_rect="208, 271, 60, 21" />
+              </lines>
+            </node>
+            <node id="3" text="小脑" x="361" y="445" width="33" height="21" text_b="2, 2, 29, 17" fold_btn_b="347, 449, 13, 13">
+              <nodes>
+                <node id="4" text="STM32" x="232" y="414" width="49" height="21" text_b="2, 2, 45, 17" fold_btn_b="218, 418, 13, 13">
+                  <nodes>
+                    <node id="16" text="霍尔编码器读取脉冲" x="32" y="383" width="120" height="21" text_b="2, 2, 116, 17" />
+                    <node id="11" text="舵机控制小车转向" x="45" y="414" width="107" height="21" text_b="2, 2, 103, 17" />
+                    <node id="12" text="PID控制电机速度" x="49" y="445" width="103" height="21" text_b="2, 2, 99, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="16" begin_side="Left" end_side="Right" begin_rect="219, 414, 62, 21" end_rect="32, 383, 120, 21" />
+                    <line target="11" begin_side="Left" end_side="Right" begin_rect="219, 414, 62, 21" end_rect="45, 414, 107, 21" />
+                    <line target="12" begin_side="Left" end_side="Right" begin_rect="219, 414, 62, 21" end_rect="49, 445, 103, 21" />
+                  </lines>
+                </node>
+                <node id="5" text="ESP32" x="237" y="492" width="44" height="21" text_b="2, 2, 40, 17" fold_btn_b="223, 496, 13, 13">
+                  <links>
+                    <link text="CAN通信" x="0" y="0" width="2" height="498" target="4" cp1_length="7" cp1_angle="243" cp2_length="12" cp2_angle="87" line_style="Dot" start_cap="None" end_cap="Arrow" hyperlink="" />
+                  </links>
+                  <nodes>
+                    <node id="14" text="PID控制位姿" x="78" y="476" width="79" height="21" text_b="2, 2, 75, 17" />
+                    <node id="15" text="九轴传感器读取位姿" x="37" y="507" width="120" height="21" text_b="2, 2, 116, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="14" begin_side="Left" end_side="Right" begin_rect="224, 492, 57, 21" end_rect="78, 476, 79, 21" />
+                    <line target="15" begin_side="Left" end_side="Right" begin_rect="224, 492, 57, 21" end_rect="37, 507, 120, 21" />
+                  </lines>
+                </node>
+              </nodes>
+              <lines>
+                <line target="4" begin_side="Left" end_side="Right" begin_rect="348, 445, 46, 21" end_rect="232, 414, 49, 21" />
+                <line target="5" begin_side="Left" end_side="Right" begin_rect="348, 445, 46, 21" end_rect="237, 492, 44, 21" />
+              </lines>
+            </node>
+            <node id="6" text="大脑" x="632" y="374" width="33" height="21" text_b="2, 2, 29, 17" fold_btn_b="666, 378, 13, 13">
+              <links>
+                <link text="串口通信" x="0" y="0" width="2" height="585" target="3" cp1_length="54" cp1_angle="172" cp2_length="164" cp2_angle="52" line_style="Dot" start_cap="None" end_cap="Arrow" hyperlink="" />
+              </links>
+              <nodes>
+                <node id="7" text="树莓派" x="745" y="374" width="46" height="21" text_b="2, 2, 42, 17" fold_btn_b="792, 378, 13, 13">
+                  <links>
+                    <link text="TCP通信" x="0" y="0" width="2" height="384" target="2" cp1_length="82" cp1_angle="194" cp2_length="236" cp2_angle="313" line_style="Dot" start_cap="None" end_cap="Arrow" hyperlink="" />
+                  </links>
+                  <nodes>
+                    <node id="23" text="4G模块" x="871" y="281" width="50" height="21" text_b="2, 2, 46, 17" />
+                    <node id="18" text="限位开关" x="871" y="312" width="58" height="21" text_b="2, 2, 54, 17" fold_btn_b="930, 316, 13, 13">
+                      <nodes>
+                        <node id="22" text="控制舵机关门" x="1009" y="312" width="83" height="21" text_b="2, 2, 79, 17" />
+                      </nodes>
+                      <lines>
+                        <line target="22" begin_side="Right" end_side="Left" begin_rect="871, 312, 71, 21" end_rect="1009, 312, 83, 21" />
+                      </lines>
+                    </node>
+                    <node id="13" text="舵机" x="871" y="343" width="33" height="21" text_b="2, 2, 29, 17" fold_btn_b="905, 347, 13, 13">
+                      <nodes>
+                        <node id="19" text="开关门" x="984" y="343" width="46" height="21" text_b="2, 2, 42, 17" />
+                      </nodes>
+                      <lines>
+                        <line target="19" begin_side="Right" end_side="Left" begin_rect="871, 343, 46, 21" end_rect="984, 343, 46, 21" />
+                      </lines>
+                    </node>
+                    <node id="8" text="二维码模块" x="871" y="390" width="70" height="21" text_b="2, 2, 66, 17" fold_btn_b="942, 394, 13, 13">
+                      <nodes>
+                        <node id="20" text="领取货物" x="1021" y="374" width="58" height="21" text_b="2, 2, 54, 17" />
+                        <node id="21" text="设定目的地" x="1021" y="405" width="70" height="21" text_b="2, 2, 66, 17" />
+                      </nodes>
+                      <lines>
+                        <line target="20" begin_side="Right" end_side="Left" begin_rect="871, 390, 83, 21" end_rect="1021, 374, 58, 21" />
+                        <line target="21" begin_side="Right" end_side="Left" begin_rect="871, 390, 83, 21" end_rect="1021, 405, 70, 21" />
+                      </lines>
+                    </node>
+                    <node id="9" text="激光雷达避障" x="871" y="436" width="83" height="21" text_b="2, 2, 79, 17" />
+                    <node id="10" text="摄像头寻迹" x="871" y="467" width="70" height="21" text_b="2, 2, 66, 17" />
+                  </nodes>
+                  <lines>
+                    <line target="23" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 281, 50, 21" />
+                    <line target="18" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 312, 58, 21" />
+                    <line target="13" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 343, 33, 21" />
+                    <line target="8" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 390, 70, 21" />
+                    <line target="9" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 436, 83, 21" />
+                    <line target="10" begin_side="Right" end_side="Left" begin_rect="745, 374, 59, 21" end_rect="871, 467, 70, 21" />
+                  </lines>
+                </node>
+              </nodes>
+              <lines>
+                <line target="7" begin_side="Right" end_side="Left" begin_rect="632, 374, 46, 21" end_rect="745, 374, 46, 21" />
+              </lines>
+            </node>
+          </nodes>
+          <lines>
+            <line target="2" begin_side="Left" end_side="Right" begin_rect="474, 364, 78, 41" end_rect="348, 271, 46, 21" />
+            <line target="3" begin_side="Left" end_side="Right" begin_rect="474, 364, 78, 41" end_rect="361, 445, 33, 21" />
+            <line target="6" begin_side="Right" end_side="Left" begin_rect="474, 364, 78, 41" end_rect="632, 374, 33, 21" />
+          </lines>
+        </node>
+      </nodes>
+    </chart>
+  </charts>
+</document>

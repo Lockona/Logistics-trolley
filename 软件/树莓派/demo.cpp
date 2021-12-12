@@ -14,7 +14,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
-int fd;
+int fd, socket_fd;
 std::vector<unsigned char> buffer;
 struct timeval timeout;
 
@@ -186,33 +186,33 @@ void testCam()
         double end = ncnn::get_current_time();
         double time = end - start;
         printf("Detect Time:%7.2f \n", time);
-        // if (output.size() != 0)
-        // {
-        //     printf("x1:%d,x2:%d,y1:%d,y2:%d \n", output[0].x1, output[0].x2, output[0].y1, output[0].y2);
-        //     if ((output[0].y2 - output[0].y1) > 360)
-        //     {
-        //         printf("M-300\r\n");
-        //         write(fd, "M-300\r\n", strlen("M-300\r\n") + 1);
-        //     }
-        //     else if ((output[0].y2 - output[0].y1) < 200)
-        //     {
-        //         printf("M300\r\n");
-        //         write(fd, "M300\r\n", strlen("M300\r\n") + 1);
-        //     }
-        //     else
-        //     {
-        //         printf("M0\r\n");
-        //         write(fd, "M0\r\n", strlen("M0\r\n") + 1);
-        //     }
-        // }
-        // else
-        // {
-        //     printf("M0\r\n");
-        //     write(fd, "M0\r\n", strlen("M0\r\n") + 1);
-        // }
+        if (output.size() != 0)
+        {
+            printf("x1:%d,x2:%d,y1:%d,y2:%d \n", output[0].x1, output[0].x2, output[0].y1, output[0].y2);
+            if ((output[0].y2 - output[0].y1) > 360)
+            {
+                printf("M-300\r\n");
+                write(fd, "M-300\r\n", strlen("M-300\r\n") + 1);
+            }
+            else if ((output[0].y2 - output[0].y1) < 200)
+            {
+                printf("M300\r\n");
+                write(fd, "M300\r\n", strlen("M300\r\n") + 1);
+            }
+            else
+            {
+                printf("M0\r\n");
+                write(fd, "M0\r\n", strlen("M0\r\n") + 1);
+            }
+        }
+        else
+        {
+            printf("M0\r\n");
+            write(fd, "M0\r\n", strlen("M0\r\n") + 1);
+        }
         drawBoxes(frame, output);
         output.clear();
-        if (fd > 0)
+        if (socket_fd > 0)
         {
             cv::imencode(".jpg", frame, buffer, param);
             // send(fd, &buffer[0], buffer.size(), 0);
@@ -220,13 +220,13 @@ void testCam()
             int i = 0;
             while ((size - i) >= 1024)
             {
-                send(fd, &buffer[i], 1024, 0);
+                send(socket_fd, &buffer[i], 1024, 0);
                 i += 1024;
             }
             size = size - i;
             if (size > 0)
             {
-                send(fd, &buffer[i], size, 0);
+                send(socket_fd, &buffer[i], size, 0);
             }
         }
         //cv::imshow("demo", frame);
@@ -241,43 +241,43 @@ int main(int argc, char **argv)
 {
     //struct termios old_t, new_t;
     // pthread_t r_pid, w_pid, cam_pid;
-    if (argc < 2)
+    if (argc < 3)
     {
         printf("Usage error!!!\r\n");
         return -1;
     }
-    // fd = open(argv[1], O_RDWR | O_NONBLOCK | O_NOCTTY | O_NDELAY);
-    // if (fd < 0)
-    // {
-    //     printf("open error!!!\r\n");
-    //     return -1;
-    // }
-    // speed_t speed = getBaudrate(115200);
-    // bzero(&new_t, sizeof(new_t));
-    // tcgetattr(fd, &old_t);
-    // tcflush(fd, TCIFLUSH);
-    // new_t.c_cflag |= speed | CS8 | CLOCAL | CREAD;
-    // new_t.c_cflag &= ~CSTOPB;
-    // new_t.c_cflag &= ~PARENB;
-    // new_t.c_iflag = IGNBRK;
-    // new_t.c_oflag = 0;
-    // tcsetattr(fd, TCSANOW, &new_t);
-    // tcgetattr(fd, &old_t);
+    fd = open(argv[1], O_RDWR | O_NONBLOCK | O_NOCTTY | O_NDELAY);
+    if (fd < 0)
+    {
+        printf("open error!!!\r\n");
+        return -1;
+    }
+    speed_t speed = getBaudrate(115200);
+    bzero(&new_t, sizeof(new_t));
+    tcgetattr(fd, &old_t);
+    tcflush(fd, TCIFLUSH);
+    new_t.c_cflag |= speed | CS8 | CLOCAL | CREAD;
+    new_t.c_cflag &= ~CSTOPB;
+    new_t.c_cflag &= ~PARENB;
+    new_t.c_iflag = IGNBRK;
+    new_t.c_oflag = 0;
+    tcsetattr(fd, TCSANOW, &new_t);
+    tcgetattr(fd, &old_t);
     // pthread_create(&r_pid, NULL, com_read, NULL);
     // pthread_create(&w_pid, NULL, com_input, NULL);
     // pthread_create(&cam_pid, NULL, testCam, NULL);
     struct sockaddr_in seraddr;
     int nSendBuf = 150 * 1024;
     memset(&seraddr, 0, sizeof(struct sockaddr));
-    fd = socket(AF_INET, SOCK_STREAM, 0);
-    setsockopt(fd, SOL_SOCKET, SO_SNDBUF, (const char *)&nSendBuf, sizeof(int));
+    socket_fd = socket(AF_INET, SOCK_STREAM, 0);
+    setsockopt(socket_fd, SOL_SOCKET, SO_SNDBUF, (const char *)&nSendBuf, sizeof(int));
     seraddr.sin_family = AF_INET;
-    seraddr.sin_port = htons(atoi(argv[1]));
+    seraddr.sin_port = htons(atoi(argv[2]));
     seraddr.sin_addr.s_addr = inet_addr("192.168.137.1");
-    if (connect(fd, (struct sockaddr *)&seraddr, sizeof(struct sockaddr)) < 0)
+    if (connect(socket_fd, (struct sockaddr *)&seraddr, sizeof(struct sockaddr)) < 0)
     {
         perror("connect\r\n");
-        close(fd);
+        close(socket_fd);
         return -1;
     }
     testCam();

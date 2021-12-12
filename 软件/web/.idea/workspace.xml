@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/order-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/History/开关电源2_0.~(10).PcbDoc.Zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出2.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/__Previews/7V4输出2.SchDocPreview" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/开关电源2_0.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块2.0/开关电源2_0.PcbDoc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/echarts1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/urls.py" afterDir="false" />

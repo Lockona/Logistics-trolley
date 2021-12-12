@@ -22,5 +22,6 @@ urlpatterns = [
     path('index', index),
     path('welcome', welcome),
     path('video', video),
-    path('order-list', order_list)
+    path('order-list', order_list),
+    path('echarts1', echarts)
 ]

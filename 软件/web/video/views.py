@@ -45,7 +45,7 @@ class mythread(threading.Thread):
 
 host = socket.gethostname()
 # host = '192.168.137.1'
-port = 5002
+port = 5000
 m = mythread(host, port)
 
 
@@ -112,3 +112,7 @@ def video(request):
 
 def order_list(request):
     return render(request, 'order-list.html')
+
+
+def echarts(request):
+    return render(request, 'echarts1.html')
