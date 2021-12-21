@@ -239,7 +239,7 @@ void testCam()
 
 int main(int argc, char **argv)
 {
-    //struct termios old_t, new_t;
+    struct termios old_t, new_t;
     // pthread_t r_pid, w_pid, cam_pid;
     if (argc < 3)
     {

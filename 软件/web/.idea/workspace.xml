@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dea943ad-0cc4-4c25-8ad5-8ff1418b3c0b" name="默认变更列表" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/echarts1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../物流小车.bmd" beforeDir="false" afterPath="$PROJECT_DIR$/../../物流小车.bmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../物流小车.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../物流小车.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/History/main.~(10).PcbDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/History/main.~(10).SchDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/History/main.~(11).PcbDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/History/main.~(12).PcbDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/History/main.~(13).PcbDoc.Zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/__Previews/main.SchDocPreview" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/__Previews/main.SchDocPreview" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/main.PcbDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/main.PcbDoc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/main.SchDoc" beforeDir="false" afterPath="$PROJECT_DIR$/../../硬件/PCB/开关电源模块1.0/main.SchDoc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/video/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/video/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../树莓派/demo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../树莓派/demo.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
