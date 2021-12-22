@@ -56,27 +56,6 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,6 +79,16 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -110,6 +99,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -183,66 +183,6 @@ client/fast:
 .PHONY : client/fast
 
 # Convenience name for target.
-test/CMakeFiles/service.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/service.dir/rule
-.PHONY : test/CMakeFiles/service.dir/rule
-
-# Convenience name for target.
-service: test/CMakeFiles/service.dir/rule
-
-.PHONY : service
-
-# fast build rule for target.
-service/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/build
-.PHONY : service/fast
-
-# Convenience name for target.
-test/CMakeFiles/subliser.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/subliser.dir/rule
-.PHONY : test/CMakeFiles/subliser.dir/rule
-
-# Convenience name for target.
-subliser: test/CMakeFiles/subliser.dir/rule
-
-.PHONY : subliser
-
-# fast build rule for target.
-subliser/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/build
-.PHONY : subliser/fast
-
-# Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-test/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : test/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: test/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make test/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
 test/CMakeFiles/publisher.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/publisher.dir/rule
 .PHONY : test/CMakeFiles/publisher.dir/rule
@@ -258,154 +198,19 @@ publisher/fast:
 .PHONY : publisher/fast
 
 # Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
+.PHONY : test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: test/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+_test_generate_messages_check_deps_person: test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : _test_generate_messages_check_deps_person
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
-.PHONY : test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
-
-# Convenience name for target.
-_test_generate_messages_check_deps_test: test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
-
-.PHONY : _test_generate_messages_check_deps_test
-
-# fast build rule for target.
-_test_generate_messages_check_deps_test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/_test_generate_messages_check_deps_test.dir/build.make test/CMakeFiles/_test_generate_messages_check_deps_test.dir/build
-.PHONY : _test_generate_messages_check_deps_test/fast
-
-# Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: test/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make test/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-test/CMakeFiles/test_geneus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_geneus.dir/rule
-.PHONY : test/CMakeFiles/test_geneus.dir/rule
-
-# Convenience name for target.
-test_geneus: test/CMakeFiles/test_geneus.dir/rule
-
-.PHONY : test_geneus
-
-# fast build rule for target.
-test_geneus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_geneus.dir/build.make test/CMakeFiles/test_geneus.dir/build
-.PHONY : test_geneus/fast
-
-# Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: test/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make test/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-test/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : test/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: test/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/roscpp_generate_messages_py.dir/build.make test/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: test/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make test/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-test/CMakeFiles/test_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_generate_messages_eus.dir/rule
-.PHONY : test/CMakeFiles/test_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-test_generate_messages_eus: test/CMakeFiles/test_generate_messages_eus.dir/rule
-
-.PHONY : test_generate_messages_eus
-
-# fast build rule for target.
-test_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_generate_messages_eus.dir/build.make test/CMakeFiles/test_generate_messages_eus.dir/build
-.PHONY : test_generate_messages_eus/fast
+_test_generate_messages_check_deps_person/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/_test_generate_messages_check_deps_person.dir/build.make test/CMakeFiles/_test_generate_messages_check_deps_person.dir/build
+.PHONY : _test_generate_messages_check_deps_person/fast
 
 # Convenience name for target.
 test/CMakeFiles/test_generate_messages.dir/rule:
@@ -438,139 +243,34 @@ test_generate_messages_py/fast:
 .PHONY : test_generate_messages_py/fast
 
 # Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+test/CMakeFiles/subliser.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/subliser.dir/rule
+.PHONY : test/CMakeFiles/subliser.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+subliser: test/CMakeFiles/subliser.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_nodejs
+.PHONY : subliser
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
+subliser/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/build
+.PHONY : subliser/fast
 
 # Convenience name for target.
-test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
-.PHONY : test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
+test/CMakeFiles/test_geneus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_geneus.dir/rule
+.PHONY : test/CMakeFiles/test_geneus.dir/rule
 
 # Convenience name for target.
-_test_generate_messages_check_deps_person: test/CMakeFiles/_test_generate_messages_check_deps_person.dir/rule
+test_geneus: test/CMakeFiles/test_geneus.dir/rule
 
-.PHONY : _test_generate_messages_check_deps_person
+.PHONY : test_geneus
 
 # fast build rule for target.
-_test_generate_messages_check_deps_person/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/_test_generate_messages_check_deps_person.dir/build.make test/CMakeFiles/_test_generate_messages_check_deps_person.dir/build
-.PHONY : _test_generate_messages_check_deps_person/fast
-
-# Convenience name for target.
-test/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : test/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: test/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/roscpp_generate_messages_eus.dir/build.make test/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-test/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : test/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: test/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make test/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make test/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-test/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: test/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/std_msgs_generate_messages_py.dir/build.make test/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make test/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-test/CMakeFiles/test_genlisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_genlisp.dir/rule
-.PHONY : test/CMakeFiles/test_genlisp.dir/rule
-
-# Convenience name for target.
-test_genlisp: test/CMakeFiles/test_genlisp.dir/rule
-
-.PHONY : test_genlisp
-
-# fast build rule for target.
-test_genlisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_genlisp.dir/build.make test/CMakeFiles/test_genlisp.dir/build
-.PHONY : test_genlisp/fast
-
-# Convenience name for target.
-test/CMakeFiles/test_genpy.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_genpy.dir/rule
-.PHONY : test/CMakeFiles/test_genpy.dir/rule
-
-# Convenience name for target.
-test_genpy: test/CMakeFiles/test_genpy.dir/rule
-
-.PHONY : test_genpy
-
-# fast build rule for target.
-test_genpy/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_genpy.dir/build.make test/CMakeFiles/test_genpy.dir/build
-.PHONY : test_genpy/fast
+test_geneus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_geneus.dir/build.make test/CMakeFiles/test_geneus.dir/build
+.PHONY : test_geneus/fast
 
 # Convenience name for target.
 test/CMakeFiles/test_generate_messages_cpp.dir/rule:
@@ -603,19 +303,34 @@ test_gencpp/fast:
 .PHONY : test_gencpp/fast
 
 # Convenience name for target.
-test/CMakeFiles/test_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_generate_messages_lisp.dir/rule
-.PHONY : test/CMakeFiles/test_generate_messages_lisp.dir/rule
+test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
+.PHONY : test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
 
 # Convenience name for target.
-test_generate_messages_lisp: test/CMakeFiles/test_generate_messages_lisp.dir/rule
+_test_generate_messages_check_deps_test: test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule
 
-.PHONY : test_generate_messages_lisp
+.PHONY : _test_generate_messages_check_deps_test
 
 # fast build rule for target.
-test_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_generate_messages_lisp.dir/build.make test/CMakeFiles/test_generate_messages_lisp.dir/build
-.PHONY : test_generate_messages_lisp/fast
+_test_generate_messages_check_deps_test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/_test_generate_messages_check_deps_test.dir/build.make test/CMakeFiles/_test_generate_messages_check_deps_test.dir/build
+.PHONY : _test_generate_messages_check_deps_test/fast
+
+# Convenience name for target.
+test/CMakeFiles/test_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_generate_messages_eus.dir/rule
+.PHONY : test/CMakeFiles/test_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+test_generate_messages_eus: test/CMakeFiles/test_generate_messages_eus.dir/rule
+
+.PHONY : test_generate_messages_eus
+
+# fast build rule for target.
+test_generate_messages_eus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_generate_messages_eus.dir/build.make test/CMakeFiles/test_generate_messages_eus.dir/build
+.PHONY : test_generate_messages_eus/fast
 
 # Convenience name for target.
 test/CMakeFiles/test_generate_messages_nodejs.dir/rule:
@@ -633,6 +348,36 @@ test_generate_messages_nodejs/fast:
 .PHONY : test_generate_messages_nodejs/fast
 
 # Convenience name for target.
+test/CMakeFiles/service.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/service.dir/rule
+.PHONY : test/CMakeFiles/service.dir/rule
+
+# Convenience name for target.
+service: test/CMakeFiles/service.dir/rule
+
+.PHONY : service
+
+# fast build rule for target.
+service/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/build
+.PHONY : service/fast
+
+# Convenience name for target.
+test/CMakeFiles/test_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_generate_messages_lisp.dir/rule
+.PHONY : test/CMakeFiles/test_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+test_generate_messages_lisp: test/CMakeFiles/test_generate_messages_lisp.dir/rule
+
+.PHONY : test_generate_messages_lisp
+
+# fast build rule for target.
+test_generate_messages_lisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_generate_messages_lisp.dir/build.make test/CMakeFiles/test_generate_messages_lisp.dir/build
+.PHONY : test_generate_messages_lisp/fast
+
+# Convenience name for target.
 test/CMakeFiles/test_gennodejs.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_gennodejs.dir/rule
 .PHONY : test/CMakeFiles/test_gennodejs.dir/rule
@@ -646,6 +391,36 @@ test_gennodejs: test/CMakeFiles/test_gennodejs.dir/rule
 test_gennodejs/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_gennodejs.dir/build.make test/CMakeFiles/test_gennodejs.dir/build
 .PHONY : test_gennodejs/fast
+
+# Convenience name for target.
+test/CMakeFiles/test_genlisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_genlisp.dir/rule
+.PHONY : test/CMakeFiles/test_genlisp.dir/rule
+
+# Convenience name for target.
+test_genlisp: test/CMakeFiles/test_genlisp.dir/rule
+
+.PHONY : test_genlisp
+
+# fast build rule for target.
+test_genlisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_genlisp.dir/build.make test/CMakeFiles/test_genlisp.dir/build
+.PHONY : test_genlisp/fast
+
+# Convenience name for target.
+test/CMakeFiles/test_genpy.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_genpy.dir/rule
+.PHONY : test/CMakeFiles/test_genpy.dir/rule
+
+# Convenience name for target.
+test_genpy: test/CMakeFiles/test_genpy.dir/rule
+
+.PHONY : test_genpy
+
+# fast build rule for target.
+test_genpy/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_genpy.dir/build.make test/CMakeFiles/test_genpy.dir/build
+.PHONY : test_genpy/fast
 
 src/client.o: src/client.cpp.o
 
@@ -815,45 +590,30 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
-	@echo "... edit_cache"
-	@echo "... client"
-	@echo "... service"
 	@echo "... install"
-	@echo "... subliser"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... publisher"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... _test_generate_messages_check_deps_test"
 	@echo "... test"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... test_geneus"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... test_generate_messages_eus"
+	@echo "... client"
+	@echo "... publisher"
+	@echo "... _test_generate_messages_check_deps_person"
+	@echo "... list_install_components"
 	@echo "... test_generate_messages"
 	@echo "... test_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... _test_generate_messages_check_deps_person"
+	@echo "... subliser"
+	@echo "... test_geneus"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
+	@echo "... edit_cache"
+	@echo "... test_generate_messages_cpp"
 	@echo "... install/local"
-	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... test_gencpp"
+	@echo "... install/strip"
+	@echo "... _test_generate_messages_check_deps_test"
+	@echo "... test_generate_messages_eus"
+	@echo "... test_generate_messages_nodejs"
+	@echo "... service"
+	@echo "... test_generate_messages_lisp"
+	@echo "... test_gennodejs"
 	@echo "... test_genlisp"
 	@echo "... test_genpy"
-	@echo "... test_generate_messages_cpp"
-	@echo "... test_gencpp"
-	@echo "... test_generate_messages_lisp"
-	@echo "... test_generate_messages_nodejs"
-	@echo "... install/strip"
-	@echo "... test_gennodejs"
 	@echo "... src/client.o"
 	@echo "... src/client.i"
 	@echo "... src/client.s"
