@@ -16,7 +16,7 @@
 <form class="register-form">
 <input type="text" placeholder="用户名" value="admin" id="r_user_name" />
 <input type="password" placeholder="密码" id="r_password" />
-<input type="text" placeholder="电子邮件" id="r_emial" />
+<input type="text" placeholder="电子邮件" id="r_email"/>
 <button id="create">创建账户</button>
 <p class="message">已经有了一个账户? <a href="#">立刻登录</a></p>
 </form>
@@ -36,39 +36,61 @@
 	{
 	 var name=$("#user_name").val();
 	 var pass=$("#password").val();
-	 if(name=="admin" && pass=="admin")
-	 {
-	  alert("登录成功！");
-	  $("#user_name").val("");
-	  $("#password").val("");
-       $(location).attr('href', 'index');
-	 }
-	 else
-	 {
-	  $("#login_form").removeClass('shake_effect');  
-	  setTimeout(function()
-	  {
-	   $("#login_form").addClass('shake_effect')
-	  },1);  
-	 }
+	 $.ajax({
+        url:"user/check/",
+        data:{name:name,passwd:pass},
+        dataType:"json",
+        success: function (data) {
+            console.log(data);
+            //发异步，把数据提交给php
+            if (data == '1') {
+                alert("登录成功！");
+                $("#user_name").val("");
+                $("#password").val("");
+                $(location).attr('href', 'index');
+            }
+            else
+            {
+               alert("用户名或密码错误！");
+            }
+        }
+     });
+
 	}
 	function check_register(){
 		var name = $("#r_user_name").val();
 		var pass = $("#r_password").val();
-		var email = $("r_email").val();
-		if(name!="" && pass=="" && email != "")
+		var email = $("#r_email").val();
+        data={name:name,passwd:pass,email:email}
+		if(name!="" && pass !="" && email != "")
 		 {
-		  alert("注册成功！");
-		  $("#user_name").val("");
-		  $("#password").val("");
+		     $.ajax({
+                url:"user/add/",
+                {#data:{name:name,passwd:pass,email:email},#}
+                 data:{user_data:JSON.stringify(data)},
+                dataType:"json",
+                success: function (data) {
+                    console.log(data);
+                    //发异步，把数据提交给php
+                    if (data == '1') {
+                      alert("注册成功！");
+                      $("#user_name").val("");
+                      $("#password").val("");
+                    }
+                    else
+                    {
+                          alert("注册失败,用户名或邮箱重复!");
+                    }
+                }
+            });
 		 }
 		 else
 		 {
-		  $("#login_form").removeClass('shake_effect');  
-		  setTimeout(function()
-		  {
-		   $("#login_form").addClass('shake_effect')
-		  },1);  
+              $("#login_form").removeClass('shake_effect');
+              setTimeout(function()
+              {
+               $("#login_form").addClass('shake_effect')
+              },1);
 		 }
 	}
 	$(function(){

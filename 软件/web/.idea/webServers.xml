@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0ce11e22-7340-4b8e-b7e9-1b69ec5eb69d" name="阿里云" url="http://120.24.203.239">
+        <fileTransfer accessType="SFTP" host="120.24.203.239" port="22" sshConfigId="45672e4d-1156-4763-898b-f57a26bdfe4d" sshConfig="root@120.24.203.239:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

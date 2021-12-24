@@ -8,8 +8,6 @@ import base64
 
 
 # Create your views here.
-def index(request):
-    return render(request, "index.html")
 
 
 client = 0
@@ -20,9 +18,9 @@ class mythread(threading.Thread):
     def __init__(self, host, port):
         threading.Thread.__init__(self)
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
+        self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server.bind((host, port))
-        # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
-        # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         # self.server.setsockopt(socket.SOL_SOCKET, socket.SO_RCVTIMEO, 1000)
 
     def run(self) -> None:
@@ -31,8 +29,6 @@ class mythread(threading.Thread):
         while True:
             try:
                 client, addr = self.server.accept()
-                client.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 150 * 1024)
-                client.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                 start_flag = True
             except socket.error:
                 client.close()
@@ -40,12 +36,12 @@ class mythread(threading.Thread):
                 pass
 
     def isAlive(self) -> bool:
-        threading.Thread.is_alive(self)
+        return threading.Thread.is_alive(self)
 
 
-# host = socket.gethostname()
-host = '192.168.137.1'
-port = 5000
+host = socket.gethostname()
+# host = '192.168.137.1'
+port = 5008
 m = mythread(host, port)
 
 
@@ -96,23 +92,5 @@ def test():
             continue
 
 
-def login(request):
-    return render(request, 'login.html')
-
-
-def welcome(request):
-    return render(request, 'welcome.html')
-
-
 def video(request):
-    # ret = next(g)
-    # return HttpResponse(ret, content_type='image/jpeg')
     return StreamingHttpResponse(test(), content_type='multipart/x-mixed-replace; boundary=frame')
-
-
-def order_list(request):
-    return render(request, 'order-list.html')
-
-
-def echarts(request):
-    return render(request, 'echarts1.html')
