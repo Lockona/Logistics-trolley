@@ -16,10 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from video.views import video
+from order_management.views import login, index, welcome, echarts, order_list, search_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('order_management.urls')),
+    path('', login),
+    path('index', index),
+    path('welcome', welcome),
+    path('echarts1', echarts),
+    path('order-list', order_list),
+    path('search_page', search_page),
     path('user/', include('user_manager.urls')),
+    path('order/', include('order_management.urls')),
     path('video', video)
 ]
