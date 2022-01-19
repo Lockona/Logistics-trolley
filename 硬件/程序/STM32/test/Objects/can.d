@@ -7,8 +7,10 @@
 .\objects\can.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\can.o: .\CMSIS\system_stm32f10x.h
 .\objects\can.o: .\USER\stm32f10x_conf.h
-.\objects\can.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\can.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\can.o: .\CMSIS\stm32f10x.h
+.\objects\can.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\can.o: .\FWLIB\inc\stm32f10x_dma.h
 .\objects\can.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\can.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\can.o: .\FWLIB\inc\stm32f10x_i2c.h

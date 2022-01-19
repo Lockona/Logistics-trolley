@@ -6,8 +6,10 @@
 .\objects\usart1.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\usart1.o: .\CMSIS\system_stm32f10x.h
 .\objects\usart1.o: .\USER\stm32f10x_conf.h
-.\objects\usart1.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\usart1.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\usart1.o: .\CMSIS\stm32f10x.h
+.\objects\usart1.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\usart1.o: .\FWLIB\inc\stm32f10x_dma.h
 .\objects\usart1.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\usart1.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\usart1.o: .\FWLIB\inc\stm32f10x_i2c.h

@@ -5,8 +5,10 @@
 .\objects\oled_spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\oled_spi.o: .\CMSIS\system_stm32f10x.h
 .\objects\oled_spi.o: .\USER\stm32f10x_conf.h
-.\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\oled_spi.o: .\CMSIS\stm32f10x.h
+.\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_dma.h
 .\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\oled_spi.o: .\FWLIB\inc\stm32f10x_i2c.h

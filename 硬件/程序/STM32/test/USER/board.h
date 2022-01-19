@@ -11,6 +11,7 @@
 #include "encoder.h"
 #include "oled_SPI.h"
 #include "can.h"
+#include "adc.h"
 
 void rt_hw_board_init(void);
 void SysTick_Handler(void);

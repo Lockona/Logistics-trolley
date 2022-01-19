@@ -5,9 +5,11 @@
 .\objects\stm32f10x_can.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\stm32f10x_can.o: .\CMSIS\system_stm32f10x.h
 .\objects\stm32f10x_can.o: .\USER\stm32f10x_conf.h
-.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_can.h
-.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_exti.h
+.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\stm32f10x_can.o: .\CMSIS\stm32f10x.h
+.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_dma.h
+.\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_i2c.h
 .\objects\stm32f10x_can.o: .\FWLIB\inc\stm32f10x_rcc.h

@@ -5,8 +5,10 @@
 .\objects\board.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\board.o: .\CMSIS\system_stm32f10x.h
 .\objects\board.o: .\USER\stm32f10x_conf.h
-.\objects\board.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\board.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\board.o: .\CMSIS\stm32f10x.h
+.\objects\board.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\board.o: .\FWLIB\inc\stm32f10x_dma.h
 .\objects\board.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\board.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\board.o: .\FWLIB\inc\stm32f10x_i2c.h
@@ -43,3 +45,4 @@
 .\objects\board.o: USER\oled_SPI.h
 .\objects\board.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\objects\board.o: USER\can.h
+.\objects\board.o: USER\adc.h

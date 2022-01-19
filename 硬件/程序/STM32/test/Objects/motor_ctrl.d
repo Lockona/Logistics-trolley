@@ -26,8 +26,10 @@
 .\objects\motor_ctrl.o: .\CMSIS\core_cm3.h
 .\objects\motor_ctrl.o: .\CMSIS\system_stm32f10x.h
 .\objects\motor_ctrl.o: .\USER\stm32f10x_conf.h
-.\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_adc.h
 .\objects\motor_ctrl.o: .\CMSIS\stm32f10x.h
+.\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_can.h
+.\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_dma.h
 .\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_exti.h
 .\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_gpio.h
 .\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_i2c.h

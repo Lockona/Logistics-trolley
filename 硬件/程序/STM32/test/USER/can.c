@@ -120,18 +120,16 @@ void can_recv_to_ctrl(void *param)
         }
     }
 }
-void CAN_Send_MSG(char *msg)
+void CAN_Send_MSG(char *msg,uint8_t len)
 {
     CanTxMsg can_tx_msg;
-    can_tx_msg.StdId = 0x51;
+    can_tx_msg.StdId = 'B';
     can_tx_msg.ExtId = 0x00;
     can_tx_msg.IDE = CAN_ID_STD;
     can_tx_msg.RTR = CAN_RTR_DATA;
-    //    while (*(msg + i) != '\0')
-    //    {
-    can_tx_msg.Data[0] = *(msg);
-    //        i++;
-    //    }
-    can_tx_msg.DLC = 1;
+
+	rt_memcpy(can_tx_msg.Data,msg,len);
+
+    can_tx_msg.DLC = len;
     CAN_Transmit(CAN1, &can_tx_msg);
 }
