@@ -22,8 +22,8 @@
   
   <body>
     <div class="x-nav">
-      <a class="layui-btn layui-btn-primary layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
-        <i class="layui-icon" style="line-height:38px">ဂ</i></a>
+      <a class="layui-btn layui-btn-small" style="float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
     </div>
     {% if  title == 'search' %}
         <div class="x-body">
@@ -124,6 +124,7 @@
                          //发异步删除数据
                          $(obj).parents("tr").remove();
                          layer.msg('已删除!',{icon:1,time:1000});
+                         $(location).attr('href', 'order-list');
                        }
                });
           });
@@ -144,9 +145,11 @@
                 success: function (data) {
                   layer.msg('删除成功', {icon: 1});
                   $(".layui-form-checked").not('.header').parents('tr').remove();
+                  $(location).attr('href', 'order-list');
                }
             });
         });
+
       }
     </script>
   </body>

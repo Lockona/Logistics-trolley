@@ -26,7 +26,7 @@
             {% csrf_token %}
           <div class="layui-form-item">
               <label for="user" class="layui-form-label">
-                  <span class="x-red">*</span>姓名
+                  <span class="x-red">*</span>用户名
               </label>
               <div class="layui-input-inline">
                   <input type="text" id="user" name="name" required lay-verify="required"
@@ -72,15 +72,15 @@
     <script>
         layui.use(['form','layer'], function(){
             $ = layui.jquery;
-          var form = layui.form
-          ,layer = layui.layer;
-        
-          //自定义验证规则
-          form.verify({
-            nikename: function(value){
-              if(value.length < 5){
-                return '昵称至少得5个字符啊';
-              }
+            var form = layui.form
+                ,layer = layui.layer;
+
+            //自定义验证规则
+            form.verify({
+                nikename: function(value){
+                  if(value.length < 5){
+                    return '昵称至少得5个字符啊';
+                  }
             }
             ,pass: [/(.+){6,12}$/, '密码必须6到12位']
             ,repass: function(value){
@@ -99,7 +99,6 @@
                 data:{user_data:JSON.stringify(data)},
                 dataType:"json",
                 success: function (data) {
-                    console.log(data);
                     ret = ''
                     //发异步，把数据提交给php
                     if (data == '1')
@@ -113,13 +112,15 @@
                     layer.alert(ret, {icon: 6},function () {
                     // 获得frame索引
                     var index = parent.layer.getFrameIndex(window.name);
-                    //关闭当前frame
-                    parent.layer.close(index);
-                    layer.close(layer.index);
-                    $(location).attr('href', '/user/all');
+                        //关闭当前frame
+                        parent.location.reload();//刷新父页面，注意一定要在关闭当前iframe层之前执行刷新
+                        parent.layer.close(index);
+                        layer.close(layer.index);
                     });
+                    console.log(data);
                 }
              });
+
             return false;
           });
         });

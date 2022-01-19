@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="x-nav">
-    <a class="layui-btn layui-btn-primary layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"
+    <a class="layui-btn layui-btn-small" style="float:right"
       href="javascript:location.replace(location.href);" title="刷新">
       <i class="layui-icon" style="line-height:38px">ဂ</i></a>
   </div>
@@ -39,7 +39,7 @@
               <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
             </th>
             <th>ID</th>
-            <th>姓名</th>
+            <th>用户名</th>
             <th>密码</th>
             <th>邮箱</th>
             <th>操作</th>
@@ -52,12 +52,18 @@
             </td>
             <td>{{i.id}}</td>
             <td>{{i.user}}</td>
-            <td>{{i.passwd}}</td>
+              {% if rule > 2 %}
+                  <td>{{i.passwd}}</td>
+              {% else %}
+                  <td>******</td>
+              {% endif %}
             <td>{{i.email}}</td>
             <td class="td-manage">
-            <a title="编辑" onclick="x_admin_show('编辑','edit_page/?user_id={{i.id}}')" href="javascript:;">
-              <i class="layui-icon">&#xe642;</i>
-            </a>
+                {% if rule > 2 or i.user == user_name%}
+                 <a title="编辑" onclick="x_admin_show('编辑','edit_page/?user_id={{i.id}}')" href="javascript:;">
+                  <i class="layui-icon">&#xe642;</i>
+                </a>
+                {% endif %}
             <a title="删除" onclick="member_del(this,{{i.id}})" href="javascript:;">
               <i class="layui-icon">&#xe640;</i>
             </a>
@@ -66,25 +72,25 @@
         {% endfor %}
         </tbody>
       </table>
-      <div class="page">
-        <div>
-          <a class="prev" href="">&lt;&lt;</a>
-          {%for j in page_list%}
-          {%if current_page == j%}
-          <span class="current">{{current_page}}</span>
-          {%else%}
-          <a class="num" href="">{{j}}</a>
-          {%endif%}
-          {%endfor%}
-          <a class="next" href="">&gt;&gt;</a>
-        </div>
-      </div>
+{#      <div class="page">#}
+{#        <div>#}
+{#          <a class="prev" href="">&lt;&lt;</a>#}
+{#          {%for j in page_list%}#}
+{#          {%if current_page == j%}#}
+{#          <span class="current">{{current_page}}</span>#}
+{#          {%else%}#}
+{#          <a class="num" href="">{{j}}</a>#}
+{#          {%endif%}#}
+{#          {%endfor%}#}
+{#          <a class="next" href="">&gt;&gt;</a>#}
+{#        </div>#}
+{#      </div>#}
 
     </div>
     <script>
       layui.use('laydate', function(){
         var laydate = layui.laydate;
-
+        $ = layui.jquery;
         //执行一个laydate实例
         laydate.render({
           elem: '#start' //指定元素
@@ -109,6 +115,7 @@
                      //发异步删除数据
                      $(obj).parents("tr").remove();
                      layer.msg('已删除!',{icon:1,time:1000});
+                     $(location).attr('href', '/user/all');
                    }
            });
         });
@@ -125,6 +132,7 @@
                     success: function (data) {
                       layer.msg('删除成功', {icon: 1});
                       $(".layui-form-checked").not('.header').parents('tr').remove();
+                      $(location).attr('href', '/user/all');
                    }
               });
         });

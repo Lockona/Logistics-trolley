@@ -5,9 +5,12 @@ from user_manager.views import *
 urlpatterns = [
     path('all', user_list),
     path('add_page', add_page),
+    path('rule', user_rule_page),
     re_path(r'edit_page/$', edit_page),
     re_path(r'add/$', add_user),
     re_path(r'edit/$', edit_user),
     re_path(r'del/$', del_user),
-    re_path(r'check/$', check_user)
+    re_path(r'check/$', check_user),
+    re_path(r'search/$', search_user),
+    re_path(r'status/$', user_status)
 ]

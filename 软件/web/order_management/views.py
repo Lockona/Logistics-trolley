@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from order_management.models import order
+from user_manager.models import user, user_rule
 from user_manager.views import check_verify, set_verify, get_user_name
 
 
@@ -19,13 +20,18 @@ def welcome(request):
         return render(request, 'login.html')
     user_name = get_user_name()
     date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    return render(request, 'welcome.html', {'user_name': user_name, 'date': date})
+    order_num = order.obj.all().count()
+    user_num = user.obj.all().count()
+    return render(request, 'welcome.html',
+                  {'user_name': user_name, 'date': date, 'order_num': order_num, 'user_num': user_num})
 
 
 def index(request):
     if not check_verify():
         return render(request, 'login.html')
-    return render(request, "index.html")
+    user_name = get_user_name()
+    rule = user_rule.obj.get(user=user_name).rule
+    return render(request, "index.html", {'user_name': user_name, 'rule': rule})
 
 
 def order_list(request):

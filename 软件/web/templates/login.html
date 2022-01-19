@@ -19,7 +19,7 @@
 
 <body class="login-bg">
     <div class="login layui-anim layui-anim-up">
-        <div class="message">管理登录</div>
+        <div class="message">管理员登录</div>
         <div id="darkbannerwrap"></div>
         
         <form class="layui-form" >
@@ -58,9 +58,10 @@
 	{
 	 var name=$("#user_name").val();
 	 var pass=$("#password").val();
+	 data ={name:name,passwd:pass}
 	 $.ajax({
         url:"user/check/",
-        data:{name:name,passwd:pass},
+        data:{data:JSON.stringify(data)},
         dataType:"json",
         success: function (data) {
             console.log(data);
