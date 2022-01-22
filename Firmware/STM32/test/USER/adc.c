@@ -2,10 +2,12 @@
 #include "adc.h"
 #include "rtthread.h"
 #include "can.h"
+#include "motor_ctrl.h"
+
 rt_mq_t battery_mq = RT_NULL;
 __IO uint16_t adc_raw_data = 0;
 
-void adc_Init()
+void adc_Init(void)
 {
 	GPIO_InitTypeDef gpio_handle;
 	ADC_InitTypeDef adc_handle;
@@ -41,26 +43,34 @@ void adc_Init()
 void battery_check(void *param)
 {
 	static uint8_t last_value= 100,value = 0;
-	uint8_t i = 1;
+	uint8_t i = 1,start_flag = 1;
 	float voltage;
 	while(1)
 	{
-		adc_raw_data += ADC_GetConversionValue(ADC1);
-		if(i > 9)
+		if(!expect_speed)
 		{
-			voltage = (float)adc_raw_data / 10 / 4096 * 3.3;
-			value = (voltage - 2.775)/(3.15 - 2.775) * 100;
-			if(value<last_value)
+			adc_raw_data += ADC_GetConversionValue(ADC1);
+			if(i > 9)
 			{
-				last_value = value;
-				CAN_Send_MSG((char*)&last_value,1);
+				voltage = (float)adc_raw_data / 10 / 4096 * 3.3;
+				value = (voltage - 2.775)/(3.15 - 2.775) * 100;
+				if(start_flag)
+				{
+					last_value = value;
+					start_flag = 0;
+				}
+				else if((value<=last_value))
+				{
+					last_value = value;
+					CAN_Send_MSG((char*)&last_value,1);
+				}
+				adc_raw_data = 0;                                          
+				i = 1;
 			}
-			adc_raw_data = 0;                                          
-			i = 1;
-		}
-		else
-		{
-			i++;
+			else
+			{
+				i++;
+			}
 		}
 		rt_thread_delay(50);
 	}

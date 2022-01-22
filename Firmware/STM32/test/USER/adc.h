@@ -7,7 +7,7 @@
 extern __IO uint16_t adc_raw_data;
 extern	rt_mq_t battery_mq;
 
-void adc_Init();
+void adc_Init(void);
 void battery_check(void *param);
 
 #endif

@@ -450,20 +450,24 @@ void heading_msg_send_task(void *param)
 
 static void twai_receive_task(void *arg)
 {
+    char buffer[8];
     while (1)
     {
         //Receive data messages from slave
         twai_message_t rx_msg;
-        if (pdTRUE == twai_receive(&rx_msg, pdMS_TO_TICKS(200)))
+        if (ESP_OK == twai_receive(&rx_msg, pdMS_TO_TICKS(200)))
         {
-            if (rx_msg.identifier == 0x50)
+            if (rx_msg.identifier == 'B')
             {
                 uint32_t data = 0;
-                for (int i = 0; i < rx_msg.data_length_code; i++)
+                data = rx_msg.data[0];
+                if (accept_sock > 0)
                 {
-                    data |= (rx_msg.data[i] << (i * 8));
+                    sprintf(buffer, "B:%d ", data);
+                    int len = send(accept_sock, buffer, strlen(buffer) + 1, 0);
+                    if (len > 0)
+                        ESP_LOGI(EXAMPLE_TAG, "Received data value %d", data);
                 }
-                ESP_LOGI(EXAMPLE_TAG, "Received data value %d", data);
             }
         }
     }
@@ -579,7 +583,7 @@ static void angle_pid_ctrl_task(void *pvParameters)
                 angle_flag = ((real_angle > -180) && (real_angle < (expect_angle + 180))) ? (-1 * move_heading_flag) : (move_heading_flag);
             }
             angle_pid.new_error = expect_angle - real_angle;
-            if ((angle_pid.new_error >= -0.5) && (angle_pid.new_error <= 0.5))
+            if ((angle_pid.new_error >= -1) && (angle_pid.new_error <= 1))
             {
                 angle_pid.new_error = 0;
             }
@@ -660,8 +664,8 @@ void app_main(void)
     xTaskCreate(heading_msg_send_task, "heading_msg_send_task", 1024 * 5, NULL, 8, NULL);
     xTaskCreate(uart_event_task, "uart-event", 1024 * 2, NULL, 12, NULL);
     xTaskCreate(tcp_server_task, "tcp_server", 4096, (void *)AF_INET, 5, NULL);
-    xTaskCreate(jy901s_read_task, "jy901s_read", 1024 * 5, NULL, 6, NULL);
-    xTaskCreate(angle_pid_ctrl_task, "angle_pid_ctrl", 4096, NULL, 7, NULL);
+    // xTaskCreate(jy901s_read_task, "jy901s_read", 1024 * 5, NULL, 6, NULL);
+    // xTaskCreate(angle_pid_ctrl_task, "angle_pid_ctrl", 4096, NULL, 7, NULL);
     uart_write_bytes(uart_num, "start!!!\r\n", strlen("start!!!\r\n"));
     // vTaskStartScheduler();
     while (1)

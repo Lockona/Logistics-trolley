@@ -7,5 +7,5 @@ extern rt_mq_t speed_mq;
 
 extern int16_t ce_time;
 
-void sr04_Init();
-void get_distan();
+void sr04_Init(void);
+void get_distan(void);

@@ -175,6 +175,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>last_value,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>can_tx_msg</ItemText>
+        </Ww>
       </WatchWindow1>
       <MemoryWindow1>
         <Mm>

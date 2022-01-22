@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

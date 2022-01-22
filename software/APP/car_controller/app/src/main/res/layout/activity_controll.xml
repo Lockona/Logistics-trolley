@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:maxWidth="2000dp"
+    android:maxHeight="1000dp"
+    android:minWidth="0dp"
+    android:minHeight="0dp"
+    tools:layout_editor_absoluteX="-50dp"
+    tools:layout_editor_absoluteY="-148dp">
+
+    <Button
+        android:id="@+id/button_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:height="100dp"
+        android:text="B"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/button_up"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_speed" />
+
+    <Button
+        android:id="@+id/button_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="264dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:height="100dp"
+        android:text="F"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_down"
+        app:layout_constraintStart_toEndOf="@+id/textView_angle"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_speed" />
+
+    <SeekBar
+        android:id="@+id/seekBar_angle"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:max="358"
+        android:progress="90"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_conn" />
+
+    <TextView
+        android:id="@+id/textView_angle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="80dp"
+        android:text="90"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_angle"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_p" />
+
+    <SeekBar
+        android:id="@+id/seekBar_speed"
+        style="@android:style/Widget.SeekBar"
+        android:layout_width="200dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="20"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_d"
+        app:layout_constraintTop_toBottomOf="@+id/textView_speed" />
+
+    <TextView
+        android:id="@+id/textView_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="3dp"
+        android:text="20"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar_speed"
+        app:layout_constraintStart_toEndOf="@+id/textView_d"
+        app:layout_constraintTop_toBottomOf="@+id/textView_b" />
+
+    <Button
+        android:id="@+id/button_conn"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="连接"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_pid" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="RX:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Rx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="360.00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:text="RY:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_Rx"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Ry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="360.00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="16dp"
+        android:text="RZ:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView_Ry"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Rz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="360.00"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar_d"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="120dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="40dp"
+        android:max="80"
+        android:progress="1"
+        android:rotation="-90"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_i"
+        app:layout_constraintTop_toBottomOf="@+id/textView_d" />
+
+    <SeekBar
+        android:id="@+id/seekBar_i"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="120dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="40dp"
+        android:indeterminate="false"
+        android:max="800"
+        android:progress="5"
+        android:rotation="-90"
+        app:layout_constraintStart_toEndOf="@+id/seekBar_p"
+        app:layout_constraintTop_toBottomOf="@+id/textView_i" />
+
+    <SeekBar
+        android:id="@+id/seekBar_p"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="120dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="40dp"
+        android:max="100"
+        android:progress="1"
+        android:rotation="-90"
+        app:layout_constraintStart_toEndOf="@+id/button_conn"
+        app:layout_constraintTop_toBottomOf="@+id/textView_p" />
+
+    <TextView
+        android:id="@+id/textView_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="32dp"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/textView_p"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="32dp"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/textView_i"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Rz" />
+
+    <TextView
+        android:id="@+id/textView_p"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="32dp"
+        android:text="18"
+        app:layout_constraintStart_toEndOf="@+id/button_pid"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Ry" />
+
+    <Button
+        android:id="@+id/button_pid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:text="PID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Rx" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="131dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:max="100"
+        android:progress="67"
+        android:theme="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        app:layout_constraintStart_toEndOf="@+id/textView_Rz"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="100"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="952dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

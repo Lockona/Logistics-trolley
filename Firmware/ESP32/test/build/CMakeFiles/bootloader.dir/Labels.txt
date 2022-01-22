@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader
+G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/CMakeFiles/bootloader-complete.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+G:/Logistics-trolley/Firmware/ESP32/test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule

@@ -37,3 +37,4 @@
 .\objects\adc.o: .\rt-thread\include\rtm.h
 .\objects\adc.o: .\rt-thread\include\rtthread.h
 .\objects\adc.o: USER\can.h
+.\objects\adc.o: USER\motor_ctrl.h

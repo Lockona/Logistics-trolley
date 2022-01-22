@@ -203,7 +203,7 @@ I (.\FWLIB\inc\stm32f10x_tim.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_usart.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_wwdg.h)(0x613FF8A2)
 I (.\FWLIB\inc\misc.h)(0x613FF8A2)
-I (USER\main.h)(0x61E81D0E)
+I (USER\main.h)(0x61EBB432)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)
 I (.\USER\rtconfig.h)(0x61E81F1E)
 I (.\rt-thread\include\rtdebug.h)(0x605A20CF)
@@ -243,7 +243,7 @@ I (.\FWLIB\inc\stm32f10x_tim.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_usart.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_wwdg.h)(0x613FF8A2)
 I (.\FWLIB\inc\misc.h)(0x613FF8A2)
-I (USER\main.h)(0x61E81D0E)
+I (USER\main.h)(0x61EBB432)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)
 I (.\USER\rtconfig.h)(0x61E81F1E)
 I (.\rt-thread\include\rtdebug.h)(0x605A20CF)
@@ -268,11 +268,11 @@ I (USER\encoder.h)(0x6161AE36)
 I (USER\oled_SPI.h)(0x61472200)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
 I (USER\can.h)(0x61E8264A)
-I (USER\adc.h)(0x61E82558)
+I (USER\adc.h)(0x61EBB416)
 F (.\USER\motor_ctrl.c)(0x61A41461)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\CMSIS -I .\FWLIB\inc -I .\USER -I .\rt-thread\include -I .\rt-thread\include\libc -I .\rt-thread\components\finsh-ID:\Users\Kero\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\motor_ctrl.o --omf_browse .\objects\motor_ctrl.crf --depend .\objects\motor_ctrl.d)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E3CC2)
-I (USER\main.h)(0x61E81D0E)
+I (USER\main.h)(0x61EBB432)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)
 I (.\USER\rtconfig.h)(0x61E81F1E)
 I (.\rt-thread\include\rtdebug.h)(0x605A20CF)
@@ -428,7 +428,7 @@ I (.\FWLIB\inc\stm32f10x_tim.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_usart.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_wwdg.h)(0x613FF8A2)
 I (.\FWLIB\inc\misc.h)(0x613FF8A2)
-I (USER\main.h)(0x61E81D0E)
+I (USER\main.h)(0x61EBB432)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)
 I (.\USER\rtconfig.h)(0x61E81F1E)
 I (.\rt-thread\include\rtdebug.h)(0x605A20CF)
@@ -484,7 +484,7 @@ I (D:\Keil_v5\ARM\ARMCC\include\signal.h)(0x5E8E3CC2)
 I (.\rt-thread\include\libc/libc_fdset.h)(0x605A20CF)
 I (.\rt-thread\include\rtservice.h)(0x605A20CF)
 I (.\rt-thread\include\rtm.h)(0x605A20CF)
-I (USER\main.h)(0x61E81D0E)
+I (USER\main.h)(0x61EBB432)
 I (USER\delay.h)(0x6161C5AE)
 I (USER\motor_ctrl.h)(0x617FE0B7)
 I (USER\usart1.h)(0x61606960)
@@ -492,8 +492,8 @@ I (USER\encoder.h)(0x6161AE36)
 I (USER\oled_SPI.h)(0x61472200)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E3CC2)
 I (USER\can.h)(0x61E8264A)
-I (USER\adc.h)(0x61E82558)
-F (.\USER\adc.c)(0x61E826DA)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\CMSIS -I .\FWLIB\inc -I .\USER -I .\rt-thread\include -I .\rt-thread\include\libc -I .\rt-thread\components\finsh-ID:\Users\Kero\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
+I (USER\adc.h)(0x61EBB416)
+F (.\USER\adc.c)(0x61EBB6CC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\CMSIS -I .\FWLIB\inc -I .\USER -I .\rt-thread\include -I .\rt-thread\include\libc -I .\rt-thread\components\finsh-ID:\Users\Kero\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\adc.o --omf_browse .\objects\adc.crf --depend .\objects\adc.d)
 I (.\CMSIS\stm32f10x.h)(0x613FF8A2)
 I (.\CMSIS\core_cm3.h)(0x613FF8A2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -511,7 +511,7 @@ I (.\FWLIB\inc\stm32f10x_tim.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_usart.h)(0x613FF8A2)
 I (.\FWLIB\inc\stm32f10x_wwdg.h)(0x613FF8A2)
 I (.\FWLIB\inc\misc.h)(0x613FF8A2)
-I (USER\adc.h)(0x61E82558)
+I (USER\adc.h)(0x61EBB416)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)
 I (.\USER\rtconfig.h)(0x61E81F1E)
 I (.\rt-thread\include\rtdebug.h)(0x605A20CF)
@@ -530,6 +530,7 @@ I (.\rt-thread\include\libc/libc_fdset.h)(0x605A20CF)
 I (.\rt-thread\include\rtservice.h)(0x605A20CF)
 I (.\rt-thread\include\rtm.h)(0x605A20CF)
 I (USER\can.h)(0x61E8264A)
+I (USER\motor_ctrl.h)(0x617FE0B7)
 F (.\rt-thread\src\clock.c)(0x605A20CF)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I .\CMSIS -I .\FWLIB\inc -I .\USER -I .\rt-thread\include -I .\rt-thread\include\libc -I .\rt-thread\components\finsh-ID:\Users\Kero\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-D__UVISION_VERSION="534" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o .\objects\clock.o --omf_browse .\objects\clock.crf --depend .\objects\clock.d)
 I (.\rt-thread\include\rthw.h)(0x605A20CF)
 I (.\rt-thread\include\rtthread.h)(0x605A20CF)

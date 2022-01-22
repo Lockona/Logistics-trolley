@@ -10,7 +10,7 @@ import ttfw_idf
                            ci_target=['esp32'])
 def test_examples_test(env, extra_data):
     app_name = 'test'
-    dut = env.get_dut(app_name, 'G:\\Logistics-trolley\\硬件\\程序\\ESP32\\test')
+    dut = env.get_dut(app_name, 'G:\Logistics-trolley\Firmware\ESP32\test')
     dut.start_app()
     res = dut.expect(ttfw_idf.MINIMUM_FREE_HEAP_SIZE_RE)
     if not res:
