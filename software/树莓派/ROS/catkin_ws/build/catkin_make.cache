@@ -1,2 +1,2 @@
-car:test
+car:test:ydlidar_ros-X2L
 -DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles

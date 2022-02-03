@@ -73,7 +73,7 @@ void can_recv_to_ctrl(void *param)
 				l_pid_val.old_error = 0;
 				l_pid_val.new_error = 0;
 				l_pid_val.sum_error = 0;
-                expect_speed = atoi((char *)recv_data.Data);
+                expect_speed = (signed char)recv_data.Data[0];
 				if (expect_speed> 0)
 				{
 					GPIOA->ODR |= (1 << 4);
@@ -102,7 +102,7 @@ void can_recv_to_ctrl(void *param)
                 rt_sem_release(angle_sem);
                 break;
 			 case 'P':
-                val = atoi((char *)recv_data.Data);
+                val = recv_data.Data[0];
 				r_pid_val.KP = val;
 				l_pid_val.KP = val;
                 break;
@@ -112,7 +112,7 @@ void can_recv_to_ctrl(void *param)
 				l_pid_val.KI = i;
                 break;
             case 'D':
-				val = atoi((char *)recv_data.Data);
+				val = recv_data.Data[0];
 				r_pid_val.KD = val;
 				l_pid_val.KD = val;
                 break;
@@ -120,10 +120,10 @@ void can_recv_to_ctrl(void *param)
         }
     }
 }
-void CAN_Send_MSG(char *msg,uint8_t len)
+void CAN_Send_MSG(char id,char *msg,uint8_t len)
 {
     CanTxMsg can_tx_msg;
-    can_tx_msg.StdId = 'B';
+    can_tx_msg.StdId = id;
     can_tx_msg.ExtId = 0x00;
     can_tx_msg.IDE = CAN_ID_STD;
     can_tx_msg.RTR = CAN_RTR_DATA;

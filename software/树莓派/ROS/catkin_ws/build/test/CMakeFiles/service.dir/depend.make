@@ -4,6 +4,9 @@
 test/CMakeFiles/service.dir/src/duoji.cpp.o: /home/ubuntu/catkin_ws/src/test/include/test/duoji.h
 test/CMakeFiles/service.dir/src/duoji.cpp.o: /home/ubuntu/catkin_ws/src/test/src/duoji.cpp
 
+test/CMakeFiles/service.dir/src/service.cpp.o: /home/ubuntu/catkin_ws/devel/include/test/test.h
+test/CMakeFiles/service.dir/src/service.cpp.o: /home/ubuntu/catkin_ws/devel/include/test/testRequest.h
+test/CMakeFiles/service.dir/src/service.cpp.o: /home/ubuntu/catkin_ws/devel/include/test/testResponse.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /home/ubuntu/catkin_ws/src/test/include/test/duoji.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /home/ubuntu/catkin_ws/src/test/src/service.cpp
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
@@ -24,6 +27,7 @@ test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/maste
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/message.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/message_event.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/message_forward.h
+test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/message_operations.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/message_traits.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/names.h
 test/CMakeFiles/service.dir/src/service.cpp.o: /opt/ros/noetic/include/ros/node_handle.h

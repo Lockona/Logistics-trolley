@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("car")
 subdirs("test")
+subdirs("ydlidar_ros-X2L")

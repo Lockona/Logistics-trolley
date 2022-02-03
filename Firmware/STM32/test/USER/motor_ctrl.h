@@ -8,7 +8,7 @@ struct position_pid
     float old_error;
     float new_error;
     float sum_error;
-};
+}; 
 
 extern struct position_pid r_pid_val;
 extern struct position_pid l_pid_val;

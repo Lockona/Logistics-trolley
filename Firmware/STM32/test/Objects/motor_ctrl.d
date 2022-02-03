@@ -21,7 +21,7 @@
 .\objects\motor_ctrl.o: .\rt-thread\include\rtservice.h
 .\objects\motor_ctrl.o: .\rt-thread\include\rtm.h
 .\objects\motor_ctrl.o: .\rt-thread\include\rtthread.h
-.\objects\motor_ctrl.o: USER\motor_ctrl.h
+.\objects\motor_ctrl.o: USER\can.h
 .\objects\motor_ctrl.o: .\CMSIS\stm32f10x.h
 .\objects\motor_ctrl.o: .\CMSIS\core_cm3.h
 .\objects\motor_ctrl.o: .\CMSIS\system_stm32f10x.h
@@ -39,5 +39,6 @@
 .\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_usart.h
 .\objects\motor_ctrl.o: .\FWLIB\inc\stm32f10x_wwdg.h
 .\objects\motor_ctrl.o: .\FWLIB\inc\misc.h
+.\objects\motor_ctrl.o: USER\motor_ctrl.h
 .\objects\motor_ctrl.o: USER\encoder.h
 .\objects\motor_ctrl.o: USER\delay.h

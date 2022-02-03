@@ -45,6 +45,7 @@ void battery_check(void *param)
 	static uint8_t last_value= 100,value = 0;
 	uint8_t i = 1,start_flag = 1;
 	float voltage;
+	rt_thread_delay(2000);
 	while(1)
 	{
 		if(!expect_speed)
@@ -62,7 +63,7 @@ void battery_check(void *param)
 				else if((value<=last_value))
 				{
 					last_value = value;
-					CAN_Send_MSG((char*)&last_value,1);
+					CAN_Send_MSG('B',(char*)&last_value,1);
 				}
 				adc_raw_data = 0;                                          
 				i = 1;

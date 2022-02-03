@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include "main.h"
+#include "can.h"
 #include "rtthread.h"
 #include "motor_ctrl.h"
 #include "encoder.h"
@@ -117,6 +118,7 @@ void stop(void)
 
 void wheel_ctrl_task(void *param)
 {
+	char buff[2];
     rt_int16_t pwm_r = 0,pwm_l = 0;
     float err = 0, sum_error, right_wheel_real_speed = 0,left_wheel_real_speed = 0;
     float last_speed_l = 0, last_speed_r = 0,p;
@@ -125,7 +127,9 @@ void wheel_ctrl_task(void *param)
 //        rt_mq_recv(speed_mq, &expect_speed, sizeof(rt_int16_t), 0);
         if (rt_sem_take(wheel_flag_sem, RT_WAITING_FOREVER) == RT_EOK)
         {
-		
+			buff[0] = L_Pulse;
+			buff[1] = R_Pulse;
+			CAN_Send_MSG('S',buff,2);
             right_wheel_real_speed = ((3.14 * 6.5) / 800) * R_Pulse * 100;
             r_pid_val.new_error = expect_speed - right_wheel_real_speed;
 //            			err = r_pid_val.new_error - r_pid_val.old_error;
