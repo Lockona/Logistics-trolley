@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/kero907/work_space/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
 
 # Include any dependencies generated for this target.
 include ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/depend.make
@@ -58,17 +58,17 @@ include ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/progress.make
 include ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/flags.make
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o: /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o"
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o -c /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o"
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.i"
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp > CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.i
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp > CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.s"
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp -o CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.s
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp -o CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.s
 
 # Object files for target ydlidar_client
 ydlidar_client_OBJECTS = \
@@ -77,39 +77,39 @@ ydlidar_client_OBJECTS = \
 # External object files for target ydlidar_client
 ydlidar_client_EXTERNAL_OBJECTS =
 
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/build.make
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libroscpp.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librostime.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libcpp_common.so
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-/home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client"
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ydlidar_client.dir/link.txt --verbose=$(VERBOSE)
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/build.make
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libroscpp.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libpthread.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_chrono.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_regex.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/librostime.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /opt/ros/noetic/lib/libcpp_common.so
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_system.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libboost_thread.so.1.71.0
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
+/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client: ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client"
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ydlidar_client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/build: /home/ubuntu/catkin_ws/devel/lib/ydlidar/ydlidar_client
+ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/build: /home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client
 
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/build
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/ydlidar_client.dir/cmake_clean.cmake
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/ydlidar_client.dir/cmake_clean.cmake
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/clean
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kero907/work_space/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kero907/work_space/catkin_ws/src /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/depend
 

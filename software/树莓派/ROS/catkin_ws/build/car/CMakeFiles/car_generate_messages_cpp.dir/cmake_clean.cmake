@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/include/car/door.h"
-  "/home/ubuntu/catkin_ws/devel/include/car/move.h"
+  "/home/kero907/work_space/catkin_ws/devel/include/car/door.h"
+  "/home/kero907/work_space/catkin_ws/devel/include/car/move.h"
   "CMakeFiles/car_generate_messages_cpp"
 )
 

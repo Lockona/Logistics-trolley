@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/lib/test/publisher"
-  "/home/ubuntu/catkin_ws/devel/lib/test/publisher.pdb"
+  "/home/kero907/work_space/catkin_ws/devel/lib/test/publisher"
+  "/home/kero907/work_space/catkin_ws/devel/lib/test/publisher.pdb"
   "CMakeFiles/publisher.dir/src/test_pub.cpp.o"
 )
 

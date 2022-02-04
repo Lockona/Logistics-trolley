@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     ros::init(argc,argv,"move_subscriber");
     ros::NodeHandle node;
     ros::Subscriber sub = node.subscribe<car::move>("move",10,callback);
-    serial = new serial_port("/dev/ttyUSB0",115200);
+    serial = new serial_port("/dev/miiboo",115200);
     ROS_INFO("move_subscriber Init OK!!!");
     ros::spin();
     return 0;

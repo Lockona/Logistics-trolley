@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/test/msg/person.lisp"
-  "/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/test/srv/test.lisp"
+  "/home/kero907/work_space/catkin_ws/devel/share/common-lisp/ros/test/msg/person.lisp"
+  "/home/kero907/work_space/catkin_ws/devel/share/common-lisp/ros/test/srv/test.lisp"
   "CMakeFiles/test_generate_messages_lisp"
 )
 

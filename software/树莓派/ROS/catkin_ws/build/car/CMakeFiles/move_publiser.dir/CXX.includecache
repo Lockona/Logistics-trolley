@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/catkin_ws/devel/include/car/move.h
+/home/kero907/work_space/catkin_ws/devel/include/car/move.h
 string
 -
 vector
@@ -22,11 +22,11 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/catkin_ws/src/car/include/car/serial_port.hpp
+/home/kero907/work_space/catkin_ws/src/car/include/car/serial_port.hpp
 sys/time.h
 -
 
-/home/ubuntu/catkin_ws/src/car/src/move_pub.cpp
+/home/kero907/work_space/catkin_ws/src/car/src/move_pub.cpp
 ros/ros.h
 -
 car/move.h

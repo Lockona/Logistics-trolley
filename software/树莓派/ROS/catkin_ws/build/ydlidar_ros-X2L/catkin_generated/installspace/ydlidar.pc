@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/catkin_ws/install
+prefix=/home/kero907/work_space/catkin_ws/install
 
 Name: ydlidar
 Description: Description of ydlidar

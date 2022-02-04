@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/test/manifest.l"
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/test/msg/person.l"
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/test/srv/test.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/test/manifest.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/test/msg/person.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/test/srv/test.l"
   "CMakeFiles/test_generate_messages_eus"
 )
 

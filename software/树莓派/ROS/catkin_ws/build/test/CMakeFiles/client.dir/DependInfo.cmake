@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubuntu/catkin_ws/src/test/src/client.cpp" "/home/ubuntu/catkin_ws/build/test/CMakeFiles/client.dir/src/client.cpp.o"
-  "/home/ubuntu/catkin_ws/src/test/src/serial_port.cpp" "/home/ubuntu/catkin_ws/build/test/CMakeFiles/client.dir/src/serial_port.cpp.o"
+  "/home/kero907/work_space/catkin_ws/src/test/src/client.cpp" "/home/kero907/work_space/catkin_ws/build/test/CMakeFiles/client.dir/src/client.cpp.o"
+  "/home/kero907/work_space/catkin_ws/src/test/src/serial_port.cpp" "/home/kero907/work_space/catkin_ws/build/test/CMakeFiles/client.dir/src/serial_port.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,8 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/ubuntu/catkin_ws/devel/include"
-  "/home/ubuntu/catkin_ws/src/test/include"
+  "/home/kero907/work_space/catkin_ws/devel/include"
+  "/home/kero907/work_space/catkin_ws/src/test/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )

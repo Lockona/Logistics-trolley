@@ -176,6 +176,15 @@ target_link_libraries(door_service ${catkin_LIBRARIES} ${WIRINGPI_LIBRARIES} ${C
 add_executable(door_client src/door_client.cpp src/serial_port.cpp)
 target_link_libraries(door_client ${catkin_LIBRARIES})
 
+add_executable(miiboo_publiser src/miiboo_pub.cpp src/serial_port.cpp)
+target_link_libraries(miiboo_publiser ${catkin_LIBRARIES})
+
+add_executable(wheel_subscriber src/wheel_sub.cpp)
+target_link_libraries(wheel_subscriber ${catkin_LIBRARIES})
+
+add_executable(imu_subscriber src/imu_sub.cpp)
+target_link_libraries(imu_subscriber ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############

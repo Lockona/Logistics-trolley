@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     ros::service::waitForService("door");
     ros::NodeHandle node;
     ros::ServiceClient client = node.serviceClient<car::door>("door");
-    serial_port *serial = new serial_port("/dev/ttyUSB0",115200);
+    serial_port *serial = new serial_port("/dev/qx1100",115200);
     car::door srv;
     char buf[32];
     ROS_INFO("door_client Init OK");

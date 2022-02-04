@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/car/manifest.l"
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/car/msg/move.l"
-  "/home/ubuntu/catkin_ws/devel/share/roseus/ros/car/srv/door.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/manifest.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/move.l"
+  "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv/door.l"
   "CMakeFiles/car_generate_messages_eus"
 )
 

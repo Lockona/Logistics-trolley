@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/catkin_ws/devel/include/test/person.h
+/home/kero907/work_space/catkin_ws/devel/include/test/person.h
 string
 -
 vector
@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/catkin_ws/src/test/src/test_pub.cpp
+/home/kero907/work_space/catkin_ws/src/test/src/test_pub.cpp
 ros/ros.h
 -
 std_msgs/String.h

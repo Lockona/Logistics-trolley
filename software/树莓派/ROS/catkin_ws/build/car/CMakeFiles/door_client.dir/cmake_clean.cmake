@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/lib/car/door_client"
-  "/home/ubuntu/catkin_ws/devel/lib/car/door_client.pdb"
+  "/home/kero907/work_space/catkin_ws/devel/lib/car/door_client"
+  "/home/kero907/work_space/catkin_ws/devel/lib/car/door_client.pdb"
   "CMakeFiles/door_client.dir/src/door_client.cpp.o"
   "CMakeFiles/door_client.dir/src/serial_port.cpp.o"
 )

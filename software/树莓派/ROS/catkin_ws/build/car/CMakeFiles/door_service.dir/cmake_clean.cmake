@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/lib/car/door_service"
-  "/home/ubuntu/catkin_ws/devel/lib/car/door_service.pdb"
+  "/home/kero907/work_space/catkin_ws/devel/lib/car/door_service"
+  "/home/kero907/work_space/catkin_ws/devel/lib/car/door_service.pdb"
   "CMakeFiles/door_service.dir/src/door_srv.cpp.o"
   "CMakeFiles/door_service.dir/src/duoji.cpp.o"
 )

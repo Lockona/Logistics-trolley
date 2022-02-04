@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/kero907/work_space/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
 
 # Utility rule file for sensor_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build: senso
 .PHONY : ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 
 ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/ydlidar_ros-X2L /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L /home/ubuntu/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kero907/work_space/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kero907/work_space/catkin_ws/src /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ydlidar_ros-X2L/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
 
