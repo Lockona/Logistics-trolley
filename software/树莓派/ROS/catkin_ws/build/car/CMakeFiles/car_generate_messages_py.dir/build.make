@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
 include car/CMakeFiles/car_generate_messages_py.dir/progress.make
 
 car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_move.py
+car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py
+car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py
 car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py
 car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py
 car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py
@@ -64,25 +66,42 @@ car/CMakeFiles/car_generate_messages_py: /home/kero907/work_space/catkin_ws/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG car/move"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kero907/work_space/catkin_ws/src/car/msg/move.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg
 
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG car/imu"
+	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg
+
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py: /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG car/miiboo"
+	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg
+
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py: /home/kero907/work_space/catkin_ws/src/car/srv/door.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python code from SRV car/door"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV car/door"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/kero907/work_space/catkin_ws/src/car/srv/door.srv -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv
 
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_move.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for car"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for car"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg --initpy
 
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_move.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py
+/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py
 /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python srv __init__.py for car"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for car"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv --initpy
 
 car_generate_messages_py: car/CMakeFiles/car_generate_messages_py
 car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_move.py
+car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_imu.py
+car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/_miiboo.py
 car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/_door.py
 car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/msg/__init__.py
 car_generate_messages_py: /home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/car/srv/__init__.py

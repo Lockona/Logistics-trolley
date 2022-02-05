@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
+messages_str = "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg;/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg;/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
 services_str = "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv"
 pkg_name = "car"
 dependencies_str = "std_msgs"

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "/home/kero907/work_space/catkin_ws/devel/share/gennodejs/ros/car/msg/imu.js"
+  "/home/kero907/work_space/catkin_ws/devel/share/gennodejs/ros/car/msg/miiboo.js"
   "/home/kero907/work_space/catkin_ws/devel/share/gennodejs/ros/car/msg/move.js"
   "/home/kero907/work_space/catkin_ws/devel/share/gennodejs/ros/car/srv/door.js"
   "CMakeFiles/car_generate_messages_nodejs"

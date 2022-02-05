@@ -481,10 +481,12 @@ static void twai_receive_task(void *arg)
 
                     uart_msg.top = 0xff;
                     uart_msg.type = 'W';
-                    uart_msg.length = 2;
+                    uart_msg.length = 4;
                     uart_msg.data = (unsigned char *)malloc(uart_msg.length);
-                    uart_msg.data[0] = l_pause / 5;
-                    uart_msg.data[1] = r_pause / 5;
+                    uart_msg.data[0] = ((l_pause / 5) | 0xff00) >> 8;
+                    uart_msg.data[1] = (l_pause / 5) | 0xff;
+                    uart_msg.data[2] = ((r_pause / 5) | 0xff00) >> 8;
+                    uart_msg.data[3] = (r_pause / 5) | 0xff;
                     uart_msg.checksum = uart_msg.top + uart_msg.type + uart_msg.length;
                     unsigned char *p = uart_msg.data;
                     for (char i = 0; i < uart_msg.length; i++)

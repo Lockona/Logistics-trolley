@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
 include car/CMakeFiles/car_generate_messages_eus.dir/progress.make
 
 car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/move.l
+car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/imu.l
+car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/miiboo.l
 car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv/door.l
 car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/manifest.l
 
@@ -63,17 +65,30 @@ car/CMakeFiles/car_generate_messages_eus: /home/kero907/work_space/catkin_ws/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from car/move.msg"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/kero907/work_space/catkin_ws/src/car/msg/move.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg
 
+/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/imu.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/imu.l: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from car/imu.msg"
+	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg
+
+/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/miiboo.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/miiboo.l: /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg
+/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/miiboo.l: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from car/miiboo.msg"
+	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg
+
 /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv/door.l: /opt/ros/noetic/lib/geneus/gen_eus.py
 /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv/door.l: /home/kero907/work_space/catkin_ws/src/car/srv/door.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from car/door.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from car/door.srv"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/kero907/work_space/catkin_ws/src/car/srv/door.srv -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv
 
 /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for car"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for car"
 	cd /home/kero907/work_space/catkin_ws/build/car && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car car std_msgs
 
 car_generate_messages_eus: car/CMakeFiles/car_generate_messages_eus
 car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/move.l
+car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/imu.l
+car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/msg/miiboo.l
 car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/srv/door.l
 car_generate_messages_eus: /home/kero907/work_space/catkin_ws/devel/share/roseus/ros/car/manifest.l
 car_generate_messages_eus: car/CMakeFiles/car_generate_messages_eus.dir/build.make

@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "car: 1 messages, 1 services")
+message(STATUS "car: 3 messages, 1 services")
 
 set(MSG_I_FLAGS "-Icar:/home/kero907/work_space/catkin_ws/src/car/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -22,6 +22,16 @@ add_custom_target(_car_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "car" "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" ""
 )
 
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_custom_target(_car_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "car" "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" ""
+)
+
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
+add_custom_target(_car_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "car" "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" "car/imu"
+)
+
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_custom_target(_car_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "car" "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" ""
@@ -37,6 +47,18 @@ _generate_msg_cpp(car
   "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/car
+)
+_generate_msg_cpp(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/car
+)
+_generate_msg_cpp(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+  "${MSG_I_FLAGS}"
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/car
 )
 
@@ -62,6 +84,10 @@ add_dependencies(car_generate_messages car_generate_messages_cpp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" NAME_WE)
 add_dependencies(car_generate_messages_cpp _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_dependencies(car_generate_messages_cpp _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
+add_dependencies(car_generate_messages_cpp _car_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_dependencies(car_generate_messages_cpp _car_generate_messages_check_deps_${_filename})
 
@@ -78,6 +104,18 @@ _generate_msg_eus(car
   "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/car
+)
+_generate_msg_eus(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/car
+)
+_generate_msg_eus(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+  "${MSG_I_FLAGS}"
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/car
 )
 
@@ -103,6 +141,10 @@ add_dependencies(car_generate_messages car_generate_messages_eus)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" NAME_WE)
 add_dependencies(car_generate_messages_eus _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_dependencies(car_generate_messages_eus _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
+add_dependencies(car_generate_messages_eus _car_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_dependencies(car_generate_messages_eus _car_generate_messages_check_deps_${_filename})
 
@@ -119,6 +161,18 @@ _generate_msg_lisp(car
   "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/car
+)
+_generate_msg_lisp(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/car
+)
+_generate_msg_lisp(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+  "${MSG_I_FLAGS}"
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/car
 )
 
@@ -144,6 +198,10 @@ add_dependencies(car_generate_messages car_generate_messages_lisp)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" NAME_WE)
 add_dependencies(car_generate_messages_lisp _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_dependencies(car_generate_messages_lisp _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
+add_dependencies(car_generate_messages_lisp _car_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_dependencies(car_generate_messages_lisp _car_generate_messages_check_deps_${_filename})
 
@@ -160,6 +218,18 @@ _generate_msg_nodejs(car
   "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/car
+)
+_generate_msg_nodejs(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/car
+)
+_generate_msg_nodejs(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+  "${MSG_I_FLAGS}"
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/car
 )
 
@@ -185,6 +255,10 @@ add_dependencies(car_generate_messages car_generate_messages_nodejs)
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" NAME_WE)
 add_dependencies(car_generate_messages_nodejs _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_dependencies(car_generate_messages_nodejs _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
+add_dependencies(car_generate_messages_nodejs _car_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_dependencies(car_generate_messages_nodejs _car_generate_messages_check_deps_${_filename})
 
@@ -201,6 +275,18 @@ _generate_msg_py(car
   "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
   "${MSG_I_FLAGS}"
   ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/car
+)
+_generate_msg_py(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/car
+)
+_generate_msg_py(car
+  "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+  "${MSG_I_FLAGS}"
+  "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/car
 )
 
@@ -225,6 +311,10 @@ add_dependencies(car_generate_messages car_generate_messages_py)
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg" NAME_WE)
+add_dependencies(car_generate_messages_py _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg" NAME_WE)
+add_dependencies(car_generate_messages_py _car_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg" NAME_WE)
 add_dependencies(car_generate_messages_py _car_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kero907/work_space/catkin_ws/src/car/srv/door.srv" NAME_WE)
 add_dependencies(car_generate_messages_py _car_generate_messages_check_deps_${_filename})

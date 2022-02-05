@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/subliser.dir/rule:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/subliser.dir/rule
-.PHONY : test/CMakeFiles/subliser.dir/rule
-
-# Convenience name for target.
-subliser: test/CMakeFiles/subliser.dir/rule
-
-.PHONY : subliser
-
-# fast build rule for target.
-subliser/fast:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/build
-.PHONY : subliser/fast
-
-# Convenience name for target.
 test/CMakeFiles/test_generate_messages.dir/rule:
 	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_generate_messages.dir/rule
 .PHONY : test/CMakeFiles/test_generate_messages.dir/rule
@@ -196,21 +181,6 @@ test_generate_messages: test/CMakeFiles/test_generate_messages.dir/rule
 test_generate_messages/fast:
 	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_generate_messages.dir/build.make test/CMakeFiles/test_generate_messages.dir/build
 .PHONY : test_generate_messages/fast
-
-# Convenience name for target.
-test/CMakeFiles/client.dir/rule:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/client.dir/rule
-.PHONY : test/CMakeFiles/client.dir/rule
-
-# Convenience name for target.
-client: test/CMakeFiles/client.dir/rule
-
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/build
-.PHONY : client/fast
 
 # Convenience name for target.
 test/CMakeFiles/_test_generate_messages_check_deps_test.dir/rule:
@@ -243,21 +213,6 @@ test_generate_messages_cpp/fast:
 .PHONY : test_generate_messages_cpp/fast
 
 # Convenience name for target.
-test/CMakeFiles/publisher.dir/rule:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/publisher.dir/rule
-.PHONY : test/CMakeFiles/publisher.dir/rule
-
-# Convenience name for target.
-publisher: test/CMakeFiles/publisher.dir/rule
-
-.PHONY : publisher
-
-# fast build rule for target.
-publisher/fast:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/publisher.dir/build.make test/CMakeFiles/publisher.dir/build
-.PHONY : publisher/fast
-
-# Convenience name for target.
 test/CMakeFiles/test_geneus.dir/rule:
 	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/test_geneus.dir/rule
 .PHONY : test/CMakeFiles/test_geneus.dir/rule
@@ -271,21 +226,6 @@ test_geneus: test/CMakeFiles/test_geneus.dir/rule
 test_geneus/fast:
 	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_geneus.dir/build.make test/CMakeFiles/test_geneus.dir/build
 .PHONY : test_geneus/fast
-
-# Convenience name for target.
-test/CMakeFiles/service.dir/rule:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/service.dir/rule
-.PHONY : test/CMakeFiles/service.dir/rule
-
-# Convenience name for target.
-service: test/CMakeFiles/service.dir/rule
-
-.PHONY : service
-
-# fast build rule for target.
-service/fast:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/build
-.PHONY : service/fast
 
 # Convenience name for target.
 test/CMakeFiles/test_gennodejs.dir/rule:
@@ -422,168 +362,6 @@ test_genpy/fast:
 	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/test_genpy.dir/build.make test/CMakeFiles/test_genpy.dir/build
 .PHONY : test_genpy/fast
 
-src/client.o: src/client.cpp.o
-
-.PHONY : src/client.o
-
-# target to build an object file
-src/client.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/client.cpp.o
-.PHONY : src/client.cpp.o
-
-src/client.i: src/client.cpp.i
-
-.PHONY : src/client.i
-
-# target to preprocess a source file
-src/client.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/client.cpp.i
-.PHONY : src/client.cpp.i
-
-src/client.s: src/client.cpp.s
-
-.PHONY : src/client.s
-
-# target to generate assembly for a file
-src/client.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/client.cpp.s
-.PHONY : src/client.cpp.s
-
-src/duoji.o: src/duoji.cpp.o
-
-.PHONY : src/duoji.o
-
-# target to build an object file
-src/duoji.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/duoji.cpp.o
-.PHONY : src/duoji.cpp.o
-
-src/duoji.i: src/duoji.cpp.i
-
-.PHONY : src/duoji.i
-
-# target to preprocess a source file
-src/duoji.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/duoji.cpp.i
-.PHONY : src/duoji.cpp.i
-
-src/duoji.s: src/duoji.cpp.s
-
-.PHONY : src/duoji.s
-
-# target to generate assembly for a file
-src/duoji.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/duoji.cpp.s
-.PHONY : src/duoji.cpp.s
-
-src/serial_port.o: src/serial_port.cpp.o
-
-.PHONY : src/serial_port.o
-
-# target to build an object file
-src/serial_port.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/serial_port.cpp.o
-.PHONY : src/serial_port.cpp.o
-
-src/serial_port.i: src/serial_port.cpp.i
-
-.PHONY : src/serial_port.i
-
-# target to preprocess a source file
-src/serial_port.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/serial_port.cpp.i
-.PHONY : src/serial_port.cpp.i
-
-src/serial_port.s: src/serial_port.cpp.s
-
-.PHONY : src/serial_port.s
-
-# target to generate assembly for a file
-src/serial_port.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/src/serial_port.cpp.s
-.PHONY : src/serial_port.cpp.s
-
-src/service.o: src/service.cpp.o
-
-.PHONY : src/service.o
-
-# target to build an object file
-src/service.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/service.cpp.o
-.PHONY : src/service.cpp.o
-
-src/service.i: src/service.cpp.i
-
-.PHONY : src/service.i
-
-# target to preprocess a source file
-src/service.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/service.cpp.i
-.PHONY : src/service.cpp.i
-
-src/service.s: src/service.cpp.s
-
-.PHONY : src/service.s
-
-# target to generate assembly for a file
-src/service.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/service.dir/build.make test/CMakeFiles/service.dir/src/service.cpp.s
-.PHONY : src/service.cpp.s
-
-src/test_pub.o: src/test_pub.cpp.o
-
-.PHONY : src/test_pub.o
-
-# target to build an object file
-src/test_pub.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/publisher.dir/build.make test/CMakeFiles/publisher.dir/src/test_pub.cpp.o
-.PHONY : src/test_pub.cpp.o
-
-src/test_pub.i: src/test_pub.cpp.i
-
-.PHONY : src/test_pub.i
-
-# target to preprocess a source file
-src/test_pub.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/publisher.dir/build.make test/CMakeFiles/publisher.dir/src/test_pub.cpp.i
-.PHONY : src/test_pub.cpp.i
-
-src/test_pub.s: src/test_pub.cpp.s
-
-.PHONY : src/test_pub.s
-
-# target to generate assembly for a file
-src/test_pub.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/publisher.dir/build.make test/CMakeFiles/publisher.dir/src/test_pub.cpp.s
-.PHONY : src/test_pub.cpp.s
-
-src/test_sub.o: src/test_sub.cpp.o
-
-.PHONY : src/test_sub.o
-
-# target to build an object file
-src/test_sub.cpp.o:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/src/test_sub.cpp.o
-.PHONY : src/test_sub.cpp.o
-
-src/test_sub.i: src/test_sub.cpp.i
-
-.PHONY : src/test_sub.i
-
-# target to preprocess a source file
-src/test_sub.cpp.i:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/src/test_sub.cpp.i
-.PHONY : src/test_sub.cpp.i
-
-src/test_sub.s: src/test_sub.cpp.s
-
-.PHONY : src/test_sub.s
-
-# target to generate assembly for a file
-src/test_sub.cpp.s:
-	cd /home/kero907/work_space/catkin_ws/build && $(MAKE) -f test/CMakeFiles/subliser.dir/build.make test/CMakeFiles/subliser.dir/src/test_sub.cpp.s
-.PHONY : src/test_sub.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -596,14 +374,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... test"
-	@echo "... subliser"
 	@echo "... test_generate_messages"
-	@echo "... client"
 	@echo "... _test_generate_messages_check_deps_test"
 	@echo "... test_generate_messages_cpp"
-	@echo "... publisher"
 	@echo "... test_geneus"
-	@echo "... service"
 	@echo "... test_gennodejs"
 	@echo "... test_gencpp"
 	@echo "... test_generate_messages_lisp"
@@ -614,24 +388,6 @@ help:
 	@echo "... _test_generate_messages_check_deps_person"
 	@echo "... test_generate_messages_eus"
 	@echo "... test_genpy"
-	@echo "... src/client.o"
-	@echo "... src/client.i"
-	@echo "... src/client.s"
-	@echo "... src/duoji.o"
-	@echo "... src/duoji.i"
-	@echo "... src/duoji.s"
-	@echo "... src/serial_port.o"
-	@echo "... src/serial_port.i"
-	@echo "... src/serial_port.s"
-	@echo "... src/service.o"
-	@echo "... src/service.i"
-	@echo "... src/service.s"
-	@echo "... src/test_pub.o"
-	@echo "... src/test_pub.i"
-	@echo "... src/test_pub.s"
-	@echo "... src/test_sub.o"
-	@echo "... src/test_sub.i"
-	@echo "... src/test_sub.s"
 .PHONY : help
 
 

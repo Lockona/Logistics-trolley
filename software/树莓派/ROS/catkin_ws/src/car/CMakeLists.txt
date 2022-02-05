@@ -56,6 +56,8 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   move.msg
+  imu.msg
+  miiboo.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -178,6 +180,9 @@ target_link_libraries(door_client ${catkin_LIBRARIES})
 
 add_executable(miiboo_publiser src/miiboo_pub.cpp src/serial_port.cpp)
 target_link_libraries(miiboo_publiser ${catkin_LIBRARIES})
+
+add_executable(odom_publisher src/odom_pub.cpp)
+target_link_libraries(odom_publisher ${catkin_LIBRARIES})
 
 add_executable(wheel_subscriber src/wheel_sub.cpp)
 target_link_libraries(wheel_subscriber ${catkin_LIBRARIES})

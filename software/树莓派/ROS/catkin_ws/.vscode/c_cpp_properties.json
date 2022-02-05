@@ -1,10 +1,7 @@
 {
   "configurations": [
     {
-      "browse": {
-        "databaseFilename": "",
-        "limitSymbolsToIncludedHeaders": true
-      },
+      "name": "Linux",
       "includePath": [
         "/opt/ros/melodic/include/**",
         "/opt/ros/noetic/include/**",
@@ -13,7 +10,11 @@
         "./devel/include/**",
         "/usr/include/**"
       ],
-      "name": "ROS"
+      "defines": [],
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++14",
+      "intelliSenseMode": "linux-gcc-x64"
     }
   ],
   "version": 4

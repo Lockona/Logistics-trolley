@@ -38,7 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car/msg" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car/msg" TYPE FILE FILES
+    "/home/kero907/work_space/catkin_ws/src/car/msg/move.msg"
+    "/home/kero907/work_space/catkin_ws/src/car/msg/imu.msg"
+    "/home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

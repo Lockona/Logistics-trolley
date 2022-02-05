@@ -54,6 +54,8 @@ CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
 include car/CMakeFiles/car_generate_messages_cpp.dir/progress.make
 
 car/CMakeFiles/car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/move.h
+car/CMakeFiles/car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/imu.h
+car/CMakeFiles/car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h
 car/CMakeFiles/car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/door.h
 
 
@@ -63,15 +65,30 @@ car/CMakeFiles/car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from car/move.msg"
 	cd /home/kero907/work_space/catkin_ws/src/car && /home/kero907/work_space/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kero907/work_space/catkin_ws/src/car/msg/move.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/include/car -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/kero907/work_space/catkin_ws/devel/include/car/imu.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/kero907/work_space/catkin_ws/devel/include/car/imu.h: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+/home/kero907/work_space/catkin_ws/devel/include/car/imu.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from car/imu.msg"
+	cd /home/kero907/work_space/catkin_ws/src/car && /home/kero907/work_space/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/include/car -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h: /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg
+/home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h: /home/kero907/work_space/catkin_ws/src/car/msg/imu.msg
+/home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from car/miiboo.msg"
+	cd /home/kero907/work_space/catkin_ws/src/car && /home/kero907/work_space/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kero907/work_space/catkin_ws/src/car/msg/miiboo.msg -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/include/car -e /opt/ros/noetic/share/gencpp/cmake/..
+
 /home/kero907/work_space/catkin_ws/devel/include/car/door.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/kero907/work_space/catkin_ws/devel/include/car/door.h: /home/kero907/work_space/catkin_ws/src/car/srv/door.srv
 /home/kero907/work_space/catkin_ws/devel/include/car/door.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/kero907/work_space/catkin_ws/devel/include/car/door.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from car/door.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from car/door.srv"
 	cd /home/kero907/work_space/catkin_ws/src/car && /home/kero907/work_space/catkin_ws/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kero907/work_space/catkin_ws/src/car/srv/door.srv -Icar:/home/kero907/work_space/catkin_ws/src/car/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p car -o /home/kero907/work_space/catkin_ws/devel/include/car -e /opt/ros/noetic/share/gencpp/cmake/..
 
 car_generate_messages_cpp: car/CMakeFiles/car_generate_messages_cpp
 car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/move.h
+car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/imu.h
+car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/miiboo.h
 car_generate_messages_cpp: /home/kero907/work_space/catkin_ws/devel/include/car/door.h
 car_generate_messages_cpp: car/CMakeFiles/car_generate_messages_cpp.dir/build.make
 
