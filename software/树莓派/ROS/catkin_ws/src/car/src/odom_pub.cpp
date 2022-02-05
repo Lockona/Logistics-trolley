@@ -9,19 +9,24 @@ nav_msgs::Odometry odom;
 geometry_msgs::Twist send_msg;
 ros::Publisher odom_pub;
 float x = 0, y = 0, z = 0;
+
 void callback(const car::miiboo::ConstPtr &msg) {
-  send_msg.linear.x = 3.14 * 6.5 *
-                      (float)(msg->left_wheel_speed + msg->right_wheel_speed) /
-                      5.0 / 780.0;
-  // send_msg.angular.x = (float)(msg->angle.roll - x) / 0.1;
-  // send_msg.angular.y = (float)(msg->angle.pitch - y) / 0.1;
-  send_msg.angular.z = (float)(msg->angle.yaw - z) / 0.1 * (3.14159 / 180);
-  // x = msg->angle.roll;
-  // y = msg->angle.pitch;
-  z = msg->angle.yaw;
-  odom_pub.publish(send_msg);
-  ROS_INFO("frame_id:%d,speed:%.2f,yaw:%.2f", msg->frame_id, send_msg.linear.x,
-           send_msg.angular.z);
+  if (msg->frame_id) {
+    send_msg.linear.x =
+        3.14 * 6.5 * (float)(msg->left_wheel_speed + msg->right_wheel_speed) /
+        5.0 / 780.0;
+    // send_msg.angular.x = (float)(msg->angle.roll - x) / 0.1;
+    // send_msg.angular.y = (float)(msg->angle.pitch - y) / 0.1;
+    send_msg.angular.z = (float)(msg->angle.yaw - z) / 0.1 * (3.14159 / 180);
+    // x = msg->angle.roll;
+    // y = msg->angle.pitch;
+    z = msg->angle.yaw;
+    odom_pub.publish(send_msg);
+    ROS_INFO("frame_id:%d,speed:%.2f,yaw:%.2f", msg->frame_id,
+             send_msg.linear.x, send_msg.angular.z);
+  } else {
+    z = msg->angle.yaw;
+  }
 }
 
 int main(int argc, char **argv) {

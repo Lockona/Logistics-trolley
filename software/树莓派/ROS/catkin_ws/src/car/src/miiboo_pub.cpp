@@ -51,8 +51,8 @@ int main(int argc, char **argv) {
         }
       }
       if (recv_flag == 0x11) {
-        msg.frame_id++;
         miiboo_pub.publish(msg);
+        msg.frame_id++;
         recv_flag = 0;
       }
       free(uart_msg.data);
