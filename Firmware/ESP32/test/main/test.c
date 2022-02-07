@@ -31,21 +31,21 @@
 #include "driver/twai.h"
 /* --------------------- Definitions and static variables ------------------ */
 
-//Example Configurations
+// Example Configurations
 #define NO_OF_MSGS 100
 #define NO_OF_ITERS 3
 #define TX_GPIO_NUM 5
 #define RX_GPIO_NUM 4
-#define TX_TASK_PRIO 8   //Sending task priority
-#define RX_TASK_PRIO 9   //Receiving task priority
-#define CTRL_TSK_PRIO 10 //Control task priority
-#define MSG_ID 0x0F6     //11 bit standard format ID
+#define TX_TASK_PRIO 8   // Sending task priority
+#define RX_TASK_PRIO 9   // Receiving task priority
+#define CTRL_TSK_PRIO 10 // Control task priority
+#define MSG_ID 0x0F6     // 11 bit standard format ID
 #define EXAMPLE_TAG "TWAI Self Test"
 
 static const twai_timing_config_t t_config = TWAI_TIMING_CONFIG_500KBITS();
-//Filter all other IDs except MSG_ID
+// Filter all other IDs except MSG_ID
 static const twai_filter_config_t f_config = TWAI_FILTER_CONFIG_ACCEPT_ALL();
-//Set to NO_ACK mode due to self testing with single module
+// Set to NO_ACK mode due to self testing with single module
 static const twai_general_config_t g_config = TWAI_GENERAL_CONFIG_DEFAULT(TX_GPIO_NUM, RX_GPIO_NUM, TWAI_MODE_NORMAL);
 
 #define PORT 5000
@@ -80,10 +80,10 @@ struct messages
     char checksum;
 };
 struct messages uart_msg;
-struct position_pid angle_pid = {26, 0.14, 0, 0, 0, 0};
+struct position_pid angle_pid = {26, 0, 2, 0, 0, 0};
 
 int16_t move_heading_flag = 1;
-float real_angle = 0, expect_angle = 0;
+float real_angle = 0, initial_angle = 0;
 static i2c_port_t i2c_port_num = I2C_NUM_0;
 static float angle[3];
 
@@ -105,7 +105,6 @@ static void do_retransmit(const int sock)
 {
     int len;
     int16_t val_int = 0;
-    float val_f = 0.0f;
     char *p;
     while (1)
     {
@@ -125,10 +124,10 @@ static void do_retransmit(const int sock)
             {
                 *(p) = '\0';
             }
+            val_int = atoi(&rx_buffer[1]);
             switch (rx_buffer[0])
             {
             case 'M':
-                val_int = atoi(&rx_buffer[1]);
                 move_heading_flag = (val_int >= 0) ? 1 : -1;
                 start_flag = (val_int != 0) ? 1 : 0;
                 if (!start_flag)
@@ -143,26 +142,16 @@ static void do_retransmit(const int sock)
                 xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'A':
-                val_f = atof(&rx_buffer[1]);
-                xQueueSend(angle_read_queue, &val_f, 0);
+                xQueueSend(angle_read_queue, &val_int, 0);
                 break;
             case 'P':
-                val_int = atoi(&rx_buffer[1]);
-                move_msg.identifier = 'P';
-                move_msg.data[0] = val_int;
-                xSemaphoreGive(move_msg_send_sem);
+                angle_pid.KP = val_int;
                 break;
             case 'I':
-                val_int = atoi(&rx_buffer[1]);
-                move_msg.identifier = 'I';
-                move_msg.data[0] = val_int;
-                xSemaphoreGive(move_msg_send_sem);
+                angle_pid.KI = (float)val_int / 100;
                 break;
             case 'D':
-                val_int = atoi(&rx_buffer[1]);
-                move_msg.identifier = 'D';
-                move_msg.data[0] = val_int;
-                xSemaphoreGive(move_msg_send_sem);
+                angle_pid.KD = val_int;
                 break;
             }
         }
@@ -319,7 +308,7 @@ static void uart_event_task(void *param)
             bzero(dtemp, buffer_size);
             switch (event.type)
             {
-            //Event of UART receving data
+            // Event of UART receving data
             /*We'd better handler data event fast, there would be much more data events than
                 other types of events. If we take too much time on data event, the queue might
                 be full.*/
@@ -342,6 +331,7 @@ static void uart_event_task(void *param)
                         angle_pid.old_error = 0;
                         angle_pid.sum_error = 0;
                     }
+                    move_msg.identifier = 'M';
                     move_msg.data[0] = val_int;
                     xSemaphoreGive(move_msg_send_sem);
                     break;
@@ -349,18 +339,24 @@ static void uart_event_task(void *param)
                     xQueueSend(angle_read_queue, &val_int, 0);
                     break;
                 case 'P':
-                    angle_pid.KP = val_int;
+                    move_msg.identifier = 'P';
+                    move_msg.data[0] = val_int;
+                    xSemaphoreGive(move_msg_send_sem);
                     break;
                 case 'I':
                     val_f = atof(&dtemp[1]);
-                    angle_pid.KI = val_f;
+                    move_msg.identifier = 'I';
+                    move_msg.data[0] = val_int;
+                    xSemaphoreGive(move_msg_send_sem);
                     break;
                 case 'D':
-                    angle_pid.KD = val_int;
+                    move_msg.data[0] = val_int;
+                    move_msg.identifier = 'D';
+                    xSemaphoreGive(move_msg_send_sem);
                     break;
                 }
                 break;
-            //Event of HW FIFO overflow detected
+            // Event of HW FIFO overflow detected
             case UART_FIFO_OVF:
                 // If fifo overflow happened, you should consider adding flow control for your application.
                 // The ISR has already reset the rx FIFO,
@@ -368,23 +364,23 @@ static void uart_event_task(void *param)
                 uart_flush_input(uart_num);
                 xQueueReset(uart0_queue);
                 break;
-            //Event of UART ring buffer full
+            // Event of UART ring buffer full
             case UART_BUFFER_FULL:
                 // If buffer full happened, you should consider encreasing your buffer size
                 // As an example, we directly flush the rx buffer here in order to read more data.
                 uart_flush_input(uart_num);
                 xQueueReset(uart0_queue);
                 break;
-            //Event of UART RX break detected
+            // Event of UART RX break detected
             case UART_BREAK:
                 break;
-            //Event of UART parity check error
+            // Event of UART parity check error
             case UART_PARITY_ERR:
                 break;
-            //Event of UART frame error
+            // Event of UART frame error
             case UART_FRAME_ERR:
                 break;
-            //UART_PATTERN_DET
+            // UART_PATTERN_DET
             case UART_PATTERN_DET:
                 // uart_get_buffered_data[]en(uart_num, &buffer_size);
                 // int pos = uart_pattern_pop_pos(uart_num);
@@ -403,7 +399,7 @@ static void uart_event_task(void *param)
                 //     uart_read_bytes(uart_num, pat, PATTERN_CHR_NUM, 100 / portTICK_PERIOD_MS);
                 // }
                 break;
-            //Others
+            // Others
             default:
                 printf("uart event type: %d", event.type);
                 break;
@@ -452,10 +448,10 @@ static void twai_receive_task(void *arg)
 {
     char index = 0;
     char buffer[8];
-    uint32_t data = 0, l_pause = 0, r_pause = 0;
+    uint32_t data = 0, l_pulse = 0, r_pulse = 0;
     while (1)
     {
-        //Receive data messages from slave
+        // Receive data messages from slave
         twai_message_t rx_msg;
         if (ESP_OK == twai_receive(&rx_msg, portMAX_DELAY))
         {
@@ -473,20 +469,17 @@ static void twai_receive_task(void *arg)
             }
             else if (rx_msg.identifier == 'S')
             {
-                l_pause += rx_msg.data[0];
-                r_pause += rx_msg.data[1];
+                l_pulse += rx_msg.data[0];
+                r_pulse += rx_msg.data[1];
                 if (index == 9)
                 {
                     xSemaphoreTake(uart_msg_mutex, portMAX_DELAY);
-
                     uart_msg.top = 0xff;
                     uart_msg.type = 'W';
-                    uart_msg.length = 4;
+                    uart_msg.length = 2;
                     uart_msg.data = (unsigned char *)malloc(uart_msg.length);
-                    uart_msg.data[0] = ((l_pause / 5) | 0xff00) >> 8;
-                    uart_msg.data[1] = (l_pause / 5) | 0xff;
-                    uart_msg.data[2] = ((r_pause / 5) | 0xff00) >> 8;
-                    uart_msg.data[3] = (r_pause / 5) | 0xff;
+                    uart_msg.data[0] = l_pulse / 10;
+                    uart_msg.data[1] = r_pulse / 10;
                     uart_msg.checksum = uart_msg.top + uart_msg.type + uart_msg.length;
                     unsigned char *p = uart_msg.data;
                     for (char i = 0; i < uart_msg.length; i++)
@@ -499,8 +492,8 @@ static void twai_receive_task(void *arg)
                     free(uart_msg.data);
                     xSemaphoreGive(uart_msg_mutex);
                     index = 0;
-                    l_pause = 0;
-                    r_pause = 0;
+                    l_pulse = 0;
+                    r_pulse = 0;
                 }
                 else
                     index++;
@@ -530,7 +523,7 @@ static void jy901s_read_task(void *pvParameters)
     i2c_cmd_link_delete(cmd);
     if (ret == 0)
     {
-        expect_angle = (float)(signed short)(data[5] << 8 | data[4]) / 32768 * 180;
+        initial_angle = (float)(signed short)(data[5] << 8 | data[4]) / 32768 * 180;
     }
     while (1)
     {
@@ -547,28 +540,25 @@ static void jy901s_read_task(void *pvParameters)
         if (ret == 0)
         {
 
-            RX += (float)(signed short)(data[1] << 8 | data[0]) / 32768 * 180;
-            RY += (float)(signed short)(data[3] << 8 | data[2]) / 32768 * 180;
-            RZ += (float)(signed short)(data[5] << 8 | data[4]) / 32768 * 180;
+            RX = (float)(signed short)(data[1] << 8 | data[0]) / 32768 * 180;
+            RY = (float)(signed short)(data[3] << 8 | data[2]) / 32768 * 180;
+            RZ = (float)(signed short)(data[5] << 8 | data[4]) / 32768 * 180;
             if (i < 5)
             {
                 i++;
             }
             else
             {
-                angle[0] = RX / 5;
-                angle[1] = RY / 5;
-                angle[2] = RZ / 5;
+                angle[0] = RX;
+                angle[1] = RY;
+                angle[2] = RZ;
                 xSemaphoreGive(angle_send_sem);
-                if (start_flag)
-                {
-                    real_angle = angle[2];
-                    xSemaphoreGive(angle_update_sem);
-                }
-                RX = 0;
-                RY = 0;
-                RZ = 0;
                 i = 1;
+            }
+            if (start_flag)
+            {
+                real_angle = angle[2];
+                xSemaphoreGive(angle_update_sem);
             }
         }
         vTaskDelay(pdMS_TO_TICKS(20));
@@ -628,30 +618,40 @@ static void angle_send_task(void *pvParameters)
 static void angle_pid_ctrl_task(void *pvParameters)
 {
     int8_t angle_flag = -1;
-    int16_t pwm = 0;
+    int16_t pwm = 0,angle_increment = 0;
     float err = 0, sum_error;
-    float last_angle = 0;
+    angle_pid.old_error = 0;
     while (1)
     {
-        xQueueReceive(angle_read_queue, &expect_angle, 0);
+        if (xQueueReceive(angle_read_queue, &angle_increment, 0) == pdTRUE)
+        {
+            if (initial_angle + angle_increment > 179)
+            {
+                angle_increment = angle_increment - 360;
+            }
+            else if (initial_angle + angle_increment < -179)
+            {
+                angle_increment = 360 + angle_increment;
+            }
+            angle_increment = 0;
+        }
         if (xSemaphoreTake(angle_update_sem, portMAX_DELAY) == pdTRUE)
         {
-            if (expect_angle >= 0)
+            if (initial_angle + angle_increment >= 0)
             {
-                angle_flag = ((real_angle > (expect_angle - 180)) && (real_angle < 180)) ? (-1 * move_heading_flag) : (move_heading_flag);
+                angle_flag = ((real_angle > (initial_angle + angle_increment - 180)) && (real_angle < 180)) ? (-1 * move_heading_flag) : (move_heading_flag);
             }
             else
             {
-                angle_flag = ((real_angle > -180) && (real_angle < (expect_angle + 180))) ? (-1 * move_heading_flag) : (move_heading_flag);
+                angle_flag = ((real_angle > -180) && (real_angle < (initial_angle + angle_increment + 180))) ? (-1 * move_heading_flag) : (move_heading_flag);
             }
-            angle_pid.new_error = expect_angle - real_angle;
+            angle_pid.new_error = initial_angle + angle_increment - real_angle;
             if ((angle_pid.new_error >= -1) && (angle_pid.new_error <= 1))
             {
                 angle_pid.new_error = 0;
             }
-            // err = angle_pid.new_error - angle_pid.old_error;
-            err = real_angle - last_angle;
-            last_angle = real_angle;
+            err = angle_pid.new_error - angle_pid.old_error;
+
             angle_pid.sum_error += angle_pid.new_error;
             sum_error = angle_pid.sum_error;
             pwm = (int)(angle_pid.KP * angle_pid.new_error + angle_pid.KI * sum_error + angle_pid.KD * err) * angle_flag;
@@ -683,7 +683,7 @@ void app_main(void)
      */
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     wifi_init_softap();
-    //Install TWAI driver
+    // Install TWAI driver
     ESP_ERROR_CHECK(twai_driver_install(&g_config, &t_config, &f_config));
     ESP_ERROR_CHECK(twai_start());
     xTaskCreatePinnedToCore(twai_receive_task, "TWAI_rx", 4096 * 2, NULL, RX_TASK_PRIO, NULL, tskNO_AFFINITY);
@@ -711,7 +711,7 @@ void app_main(void)
     i2c_param_config(i2c_port_num, &i2c_config);
     ESP_ERROR_CHECK(i2c_driver_install(i2c_port_num, i2c_config.mode, 0, 0, 0));
 
-    angle_read_queue = xQueueCreate(10, sizeof(float));
+    angle_read_queue = xQueueCreate(10, sizeof(int16_t));
     angle_send_sem = xSemaphoreCreateBinary();
     move_msg_send_sem = xSemaphoreCreateBinary();
     heading_msg_send_sem = xSemaphoreCreateBinary();
@@ -720,7 +720,7 @@ void app_main(void)
     client_ready_sem = xSemaphoreCreateBinary();
     uart_msg_mutex = xSemaphoreCreateMutex();
 
-    //Create tasks and synchronization primitives
+    // Create tasks and synchronization primitives
 
     ESP_LOGI(EXAMPLE_TAG, "Driver installed");
     xTaskCreate(move_msg_send_task, "move_msg_send_task", 1024 * 2, NULL, 8, NULL);
@@ -731,8 +731,4 @@ void app_main(void)
     xTaskCreate(jy901s_read_task, "jy901s_read", 1024 * 2, NULL, 6, NULL);
     xTaskCreate(angle_pid_ctrl_task, "angle_pid_ctrl", 4096, NULL, 7, NULL);
     uart_write_bytes(uart_num, "start!!!\r\n", strlen("start!!!\r\n"));
-    while (1)
-    {
-        vTaskDelay(pdMS_TO_TICKS(500));
-    }
 }

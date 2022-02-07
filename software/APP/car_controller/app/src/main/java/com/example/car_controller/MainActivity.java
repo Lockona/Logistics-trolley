@@ -141,12 +141,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if(isConnected) {
-                    angle_Text.setText("" + (i-179));
+                    angle_Text.setText("" + (i-4)*45);
                     isChanged = true;
                     cmd = 'A';
                 }
                 else
-                    seekBar.setProgress(90);
+                    seekBar.setProgress(4);
             }
 
             @Override
@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
         i_Bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                i_text.setText(""+((double)i/100));
+                i_text.setText(""+i);
             }
 
             @Override
@@ -282,14 +282,13 @@ public class MainActivity extends AppCompatActivity {
                                 str = ("M" + "0\r\n");
                                 break;
                             case 'A':
-                                Thread.sleep(100);
                                 str = ('A' + angle_Text.getText().toString() + "\r\n");
                                 System.out.println(str);
                                 break;
                         }
                         outputStream.write(str.getBytes());
                         str = null;
-                        Thread.sleep(10);
+                        Thread.sleep(100);
                     }
                     else if(changedPID) {
                         changedPID = false;

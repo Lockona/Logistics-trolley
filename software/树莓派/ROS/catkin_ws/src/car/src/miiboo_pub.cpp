@@ -43,10 +43,8 @@ int main(int argc, char **argv) {
                           100;
           recv_flag |= 0x01;
         } else if (uart_msg.type == 'W') {
-          msg.left_wheel_speed =
-              (((int)uart_msg.data[0] << 8) | uart_msg.data[1]);
-          msg.right_wheel_speed =
-              (((int)uart_msg.data[2] << 8) | uart_msg.data[3]);
+          msg.left_wheel_speed = uart_msg.data[0];
+          msg.right_wheel_speed = uart_msg.data[1];
           recv_flag |= 0x10;
         }
       }

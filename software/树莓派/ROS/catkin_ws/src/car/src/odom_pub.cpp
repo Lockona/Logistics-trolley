@@ -14,10 +14,10 @@ void callback(const car::miiboo::ConstPtr &msg) {
   if (msg->frame_id) {
     send_msg.linear.x =
         3.14 * 6.5 * (float)(msg->left_wheel_speed + msg->right_wheel_speed) /
-        5.0 / 780.0;
+        2 / 780;
     // send_msg.angular.x = (float)(msg->angle.roll - x) / 0.1;
     // send_msg.angular.y = (float)(msg->angle.pitch - y) / 0.1;
-    send_msg.angular.z = (float)(msg->angle.yaw - z) / 0.1 * (3.14159 / 180);
+    send_msg.angular.z = (msg->angle.yaw - z) * 10 * (3.14159 / 180);
     // x = msg->angle.roll;
     // y = msg->angle.pitch;
     z = msg->angle.yaw;
