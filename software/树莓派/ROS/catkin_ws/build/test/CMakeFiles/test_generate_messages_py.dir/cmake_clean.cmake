@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test/msg/__init__.py"
-  "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test/msg/_person.py"
-  "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test/srv/__init__.py"
-  "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test/srv/_test.py"
+  "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test/msg/__init__.py"
+  "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test/msg/_person.py"
+  "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test/srv/__init__.py"
+  "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test/srv/_test.py"
   "CMakeFiles/test_generate_messages_py"
 )
 

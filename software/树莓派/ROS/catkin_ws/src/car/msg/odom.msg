@@ -1,0 +1,5 @@
+float32 position_x
+float32 position_y
+float32 oriention
+float32 velocity_linear
+float32 velocity_angular

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/wheel_subscriber"
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/wheel_subscriber.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/wheel_subscriber"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/wheel_subscriber.pdb"
   "CMakeFiles/wheel_subscriber.dir/src/wheel_sub.cpp.o"
 )
 

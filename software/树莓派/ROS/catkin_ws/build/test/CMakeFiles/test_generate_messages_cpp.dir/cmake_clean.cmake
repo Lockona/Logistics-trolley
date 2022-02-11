@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/include/test/person.h"
-  "/home/kero907/work_space/catkin_ws/devel/include/test/test.h"
+  "/home/kero/workspace/catkin_ws/devel/include/test/person.h"
+  "/home/kero/workspace/catkin_ws/devel/include/test/test.h"
   "CMakeFiles/test_generate_messages_cpp"
 )
 

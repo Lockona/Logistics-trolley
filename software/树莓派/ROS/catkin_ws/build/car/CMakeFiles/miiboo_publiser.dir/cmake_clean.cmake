@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/miiboo_publiser"
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/miiboo_publiser.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/miiboo_publiser"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/miiboo_publiser.pdb"
   "CMakeFiles/miiboo_publiser.dir/src/miiboo_pub.cpp.o"
   "CMakeFiles/miiboo_publiser.dir/src/serial_port.cpp.o"
 )

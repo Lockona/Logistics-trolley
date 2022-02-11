@@ -58,6 +58,7 @@ add_message_files(
   move.msg
   imu.msg
   miiboo.msg
+  odom.msg
 )
 
 ## Generate services in the 'srv' folder

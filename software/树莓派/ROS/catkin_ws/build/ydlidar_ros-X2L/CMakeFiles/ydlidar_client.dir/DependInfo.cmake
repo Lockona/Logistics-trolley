@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp" "/home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o"
+  "/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_client.cpp" "/home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,9 +19,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src"
-  "/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/include"
-  "/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src"
+  "/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src"
+  "/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/include"
+  "/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src"
   )
 
 # Targets to which this target links.

@@ -142,16 +142,34 @@ static void do_retransmit(const int sock)
                 xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'A':
-                xQueueSend(angle_read_queue, &val_int, 0);
+                // xQueueSend(angle_read_queue, &val_int, 0);
+                val_int = ((float)val_int / 180) * 2000 + 500;
+                sprintf((char *)heading_msg.data, "%d", val_int);
+                xSemaphoreGive(heading_msg_send_sem);
                 break;
+            // case 'P':
+            //     angle_pid.KP = val_int;
+            //     break;
+            // case 'I':
+            //     angle_pid.KI = (float)val_int / 100;
+            //     break;
+            // case 'D':
+            //     angle_pid.KD = val_int;
+            //     break;
             case 'P':
-                angle_pid.KP = val_int;
+                move_msg.identifier = 'P';
+                move_msg.data[0] = val_int;
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'I':
-                angle_pid.KI = (float)val_int / 100;
+                move_msg.identifier = 'I';
+                move_msg.data[0] = val_int;
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             case 'D':
-                angle_pid.KD = val_int;
+                move_msg.data[0] = val_int;
+                move_msg.identifier = 'D';
+                xSemaphoreGive(move_msg_send_sem);
                 break;
             }
         }
@@ -344,7 +362,6 @@ static void uart_event_task(void *param)
                     xSemaphoreGive(move_msg_send_sem);
                     break;
                 case 'I':
-                    val_f = atof(&dtemp[1]);
                     move_msg.identifier = 'I';
                     move_msg.data[0] = val_int;
                     xSemaphoreGive(move_msg_send_sem);
@@ -558,7 +575,7 @@ static void jy901s_read_task(void *pvParameters)
             if (start_flag)
             {
                 real_angle = angle[2];
-                xSemaphoreGive(angle_update_sem);
+                // xSemaphoreGive(angle_update_sem);
             }
         }
         vTaskDelay(pdMS_TO_TICKS(20));
@@ -618,7 +635,7 @@ static void angle_send_task(void *pvParameters)
 static void angle_pid_ctrl_task(void *pvParameters)
 {
     int8_t angle_flag = -1;
-    int16_t pwm = 0,angle_increment = 0;
+    int16_t pwm = 0, angle_increment = 0;
     float err = 0, sum_error;
     angle_pid.old_error = 0;
     while (1)
@@ -633,7 +650,7 @@ static void angle_pid_ctrl_task(void *pvParameters)
             {
                 angle_increment = 360 + angle_increment;
             }
-            angle_increment = 0;
+            ESP_LOGI(TAG, "angle:%.2f", initial_angle + angle_increment);
         }
         if (xSemaphoreTake(angle_update_sem, portMAX_DELAY) == pdTRUE)
         {
@@ -729,6 +746,6 @@ void app_main(void)
     xTaskCreate(angle_send_task, "angle-send", 1024 * 2, NULL, 12, NULL);
     xTaskCreate(tcp_server_task, "tcp_server", 4096, (void *)AF_INET, 5, NULL);
     xTaskCreate(jy901s_read_task, "jy901s_read", 1024 * 2, NULL, 6, NULL);
-    xTaskCreate(angle_pid_ctrl_task, "angle_pid_ctrl", 4096, NULL, 7, NULL);
+    // xTaskCreate(angle_pid_ctrl_task, "angle_pid_ctrl", 4096, NULL, 7, NULL);
     uart_write_bytes(uart_num, "start!!!\r\n", strlen("start!!!\r\n"));
 }

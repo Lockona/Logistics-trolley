@@ -7,14 +7,8 @@
 #include "encoder.h"
 #include "delay.h"
 
-//#define KP 10
-//#define KI 0.2
-//#define KD 0
-//#define speed 20
-
-//struct 	Inc_pid l_pid_val = {0.5,20,0,10, 0, 0};
-struct position_pid r_pid_val = {100, 0.5, 5, 0, 0, 0};
-struct position_pid l_pid_val = {100, 0.5, 5, 0, 0, 0};
+struct Inc_pid r_pid_val = {5, 36, 0, 0, 0, 0};
+struct Inc_pid l_pid_val = {5, 36, 0, 0, 0, 0};
 
 rt_int16_t expect_speed = 0;
 
@@ -130,54 +124,23 @@ void wheel_ctrl_task(void *param)
 			buff[0] = L_Pulse;
 			buff[1] = R_Pulse;
 			CAN_Send_MSG('S',buff,2);
-            right_wheel_real_speed = ((3.14 * 6.5) / 800) * R_Pulse * 100;
-            r_pid_val.new_error = expect_speed - right_wheel_real_speed;
-//            			err = r_pid_val.new_error - r_pid_val.old_error;
-            err = right_wheel_real_speed - last_speed_r;
-            last_speed_r = right_wheel_real_speed;
-            if ((r_pid_val.new_error > (expect_speed * 0.5)) || (r_pid_val.new_error < -(expect_speed * 0.5)))
-            {
-                p = r_pid_val.KP;
-                sum_error = 0;
-            }
-            else
-            {
-                p = 1;
-                r_pid_val.sum_error += r_pid_val.new_error;
-                sum_error = r_pid_val.sum_error;
-            }
-            pwm_r = (int)(p * r_pid_val.new_error + r_pid_val.KI * sum_error + r_pid_val.KD * err);
+			L_Pulse = (L_Pulse>0)?(L_Pulse):(L_Pulse*-1);
+			R_Pulse = (R_Pulse>0)?(R_Pulse):(R_Pulse*-1);
 			
+            right_wheel_real_speed = 3.14 * 6.5* R_Pulse / 780  * 100;
+            r_pid_val.new_error = expect_speed - right_wheel_real_speed;
+			pwm_r = (int16_t)(r_pid_val.KP*(r_pid_val.new_error - r_pid_val.last_error)+r_pid_val.KI*r_pid_val.new_error+r_pid_val.KD*(r_pid_val.new_error - 2*r_pid_val.last_error+r_pid_val.prev_error) );
 			right_wheel_ctrl(pwm_r);
 			
-			left_wheel_real_speed = ((3.14 * 6.5) / 800) * L_Pulse * 100;
+			left_wheel_real_speed = 3.14 * 6.5* L_Pulse / 780  * 100;
             l_pid_val.new_error = expect_speed - left_wheel_real_speed;
-//            			err = l_pid_val.new_error - l_pid_val.old_error;
-            err = left_wheel_real_speed - last_speed_l;
-            last_speed_l = left_wheel_real_speed;
-            if ((l_pid_val.new_error > (expect_speed * 0.5)) || (l_pid_val.new_error < -(expect_speed * 0.5)))
-            {
-                p = l_pid_val.KP;
-                sum_error = 0;
-            }
-            else
-            {
-                p = 1;
-                l_pid_val.sum_error += l_pid_val.new_error;
-                sum_error = l_pid_val.sum_error;
-            }
-            pwm_l = (int)(p * l_pid_val.new_error + l_pid_val.KI * sum_error + l_pid_val.KD * err); 
-			
+			pwm_l = (int16_t)(l_pid_val.KP*(l_pid_val.new_error - l_pid_val.last_error)+l_pid_val.KI*l_pid_val.new_error+l_pid_val.KD*(l_pid_val.new_error - 2*l_pid_val.last_error+l_pid_val.prev_error) );
 			left_wheel_ctrl(pwm_l);
 			
-            l_pid_val.old_error = l_pid_val.new_error;
-            r_pid_val.old_error = r_pid_val.new_error;
-			
-				
-			
-            //			while(!(USART1->SR&(0x01<<7)))
-            //				;
-            //			USART1->DR = (L_Pulse+R_Pulse)/2;
+			r_pid_val.prev_error = r_pid_val.last_error;
+			r_pid_val.last_error = r_pid_val.new_error;
+			l_pid_val.prev_error = l_pid_val.last_error;
+			l_pid_val.last_error = l_pid_val.new_error;
         }
     }
 }

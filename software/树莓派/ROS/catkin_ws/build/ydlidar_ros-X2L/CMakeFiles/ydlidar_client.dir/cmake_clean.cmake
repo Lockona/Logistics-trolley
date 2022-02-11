@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client"
-  "/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_client.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_client"
+  "/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_client.pdb"
   "CMakeFiles/ydlidar_client.dir/src/ydlidar_client.cpp.o"
 )
 

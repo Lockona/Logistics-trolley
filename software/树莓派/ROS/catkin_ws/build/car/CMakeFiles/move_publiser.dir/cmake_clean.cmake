@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/move_publiser"
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/move_publiser.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/move_publiser"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/move_publiser.pdb"
   "CMakeFiles/move_publiser.dir/src/move_pub.cpp.o"
   "CMakeFiles/move_publiser.dir/src/serial_port.cpp.o"
 )

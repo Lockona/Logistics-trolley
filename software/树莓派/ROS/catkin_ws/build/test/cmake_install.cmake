@@ -1,8 +1,8 @@
-# Install script for directory: /home/kero907/work_space/catkin_ws/src/test
+# Install script for directory: /home/kero/workspace/catkin_ws/src/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/kero907/work_space/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kero/workspace/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,57 +38,57 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/msg" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/src/test/msg/person.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/msg" TYPE FILE FILES "/home/kero/workspace/catkin_ws/src/test/msg/person.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/srv" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/src/test/srv/test.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/srv" TYPE FILE FILES "/home/kero/workspace/catkin_ws/src/test/srv/test.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/cmake" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/build/test/catkin_generated/installspace/test-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/cmake" TYPE FILE FILES "/home/kero/workspace/catkin_ws/build/test/catkin_generated/installspace/test-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/kero907/work_space/catkin_ws/devel/include/test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/kero/workspace/catkin_ws/devel/include/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/kero907/work_space/catkin_ws/devel/share/roseus/ros/test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/kero/workspace/catkin_ws/devel/share/roseus/ros/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/kero907/work_space/catkin_ws/devel/share/common-lisp/ros/test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/kero/workspace/catkin_ws/devel/share/common-lisp/ros/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/kero907/work_space/catkin_ws/devel/share/gennodejs/ros/test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/kero/workspace/catkin_ws/devel/share/gennodejs/ros/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/kero907/work_space/catkin_ws/devel/lib/python3/dist-packages/test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/kero/workspace/catkin_ws/devel/lib/python3/dist-packages/test")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/build/test/catkin_generated/installspace/test.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kero/workspace/catkin_ws/build/test/catkin_generated/installspace/test.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/cmake" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/build/test/catkin_generated/installspace/test-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/cmake" TYPE FILE FILES "/home/kero/workspace/catkin_ws/build/test/catkin_generated/installspace/test-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test/cmake" TYPE FILE FILES
-    "/home/kero907/work_space/catkin_ws/build/test/catkin_generated/installspace/testConfig.cmake"
-    "/home/kero907/work_space/catkin_ws/build/test/catkin_generated/installspace/testConfig-version.cmake"
+    "/home/kero/workspace/catkin_ws/build/test/catkin_generated/installspace/testConfig.cmake"
+    "/home/kero/workspace/catkin_ws/build/test/catkin_generated/installspace/testConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test" TYPE FILE FILES "/home/kero907/work_space/catkin_ws/src/test/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/test" TYPE FILE FILES "/home/kero/workspace/catkin_ws/src/test/package.xml")
 endif()
 

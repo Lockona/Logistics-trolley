@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/imu_subscriber"
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/imu_subscriber.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/imu_subscriber"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/imu_subscriber.pdb"
   "CMakeFiles/imu_subscriber.dir/src/imu_sub.cpp.o"
 )
 

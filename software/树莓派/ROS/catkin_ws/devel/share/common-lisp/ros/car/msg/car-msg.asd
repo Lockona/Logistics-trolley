@@ -10,4 +10,6 @@
     (:file "_package_miiboo" :depends-on ("_package"))
     (:file "move" :depends-on ("_package_move"))
     (:file "_package_move" :depends-on ("_package"))
+    (:file "odom" :depends-on ("_package_odom"))
+    (:file "_package_odom" :depends-on ("_package"))
   ))

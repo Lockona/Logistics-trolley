@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/test/subliser"
-  "/home/kero907/work_space/catkin_ws/devel/lib/test/subliser.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/test/subliser"
+  "/home/kero/workspace/catkin_ws/devel/lib/test/subliser.pdb"
   "CMakeFiles/subliser.dir/src/test_sub.cpp.o"
 )
 

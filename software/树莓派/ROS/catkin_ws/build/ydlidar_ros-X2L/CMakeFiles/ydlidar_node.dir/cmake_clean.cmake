@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node"
-  "/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node"
+  "/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node.pdb"
   "CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o"
   "CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o"
   "CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o"

@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=c++0x -lwiringPi -lpthread
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"car\"
 
-CXX_INCLUDES = -I/home/kero907/work_space/catkin_ws/devel/include -I/home/kero907/work_space/catkin_ws/src/car/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/kero/workspace/catkin_ws/devel/include -I/home/kero/workspace/catkin_ws/src/car/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

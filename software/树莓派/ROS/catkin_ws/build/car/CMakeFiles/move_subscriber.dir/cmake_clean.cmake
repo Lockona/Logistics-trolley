@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/move_subscriber"
-  "/home/kero907/work_space/catkin_ws/devel/lib/car/move_subscriber.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/move_subscriber"
+  "/home/kero/workspace/catkin_ws/devel/lib/car/move_subscriber.pdb"
   "CMakeFiles/move_subscriber.dir/src/move_sub.cpp.o"
   "CMakeFiles/move_subscriber.dir/src/serial_port.cpp.o"
 )

@@ -67,15 +67,10 @@ void can_recv_to_ctrl(void *param)
             switch (recv_data.StdId)
             {
             case 'M':
-				r_pid_val.old_error = 0;
-				r_pid_val.new_error = 0;
-				r_pid_val.sum_error = 0;
-				l_pid_val.old_error = 0;
-				l_pid_val.new_error = 0;
-				l_pid_val.sum_error = 0;
                 expect_speed = (signed char)recv_data.Data[0];
 				if (expect_speed> 0)
 				{
+					expect_speed = expect_speed*1.25;
 					GPIOA->ODR |= (1 << 4);
 					GPIOA->ODR &= ~(1 << 5);	  
 					GPIOB->ODR |= (1 << 15);
@@ -87,7 +82,7 @@ void can_recv_to_ctrl(void *param)
 					GPIOA->ODR &= ~(1 << 4);
 					GPIOB->ODR |= (1 << 14);
 					GPIOB->ODR &= ~(1 << 15);
-					expect_speed = expect_speed * -1;
+					expect_speed = expect_speed * -1.25;
 				}
 				else
 				{
@@ -107,9 +102,9 @@ void can_recv_to_ctrl(void *param)
 				l_pid_val.KP = val;
                 break;
             case 'I':
-				i = atof((char *)recv_data.Data);
-				r_pid_val.KI = i;
-				l_pid_val.KI = i;
+				val = recv_data.Data[0];
+				r_pid_val.KI = val;
+				l_pid_val.KI = val;
                 break;
             case 'D':
 				val = recv_data.Data[0];

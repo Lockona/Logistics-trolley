@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if(isConnected) {
-                    angle_Text.setText("" + (i-4)*45);
+                    angle_Text.setText("" + i);
                     isChanged = true;
                     cmd = 'A';
                 }
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 if(isConnected)
                     speed_Text.setText(""+i);
                 else
-                    seekBar.setProgress(20);
+                    seekBar.setProgress(90);
             }
 
             @Override

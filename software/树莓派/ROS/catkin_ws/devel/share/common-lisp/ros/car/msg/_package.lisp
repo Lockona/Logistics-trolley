@@ -7,5 +7,7 @@
    "MIIBOO"
    "<MOVE>"
    "MOVE"
+   "<ODOM>"
+   "ODOM"
   ))
 

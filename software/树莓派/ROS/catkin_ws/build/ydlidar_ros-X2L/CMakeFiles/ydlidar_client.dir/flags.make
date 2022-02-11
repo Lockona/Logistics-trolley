@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"ydlidar\"
 
-CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src -I/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/include -I/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src 
+CXX_INCLUDES = -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src -I/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/include -I/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src 
 

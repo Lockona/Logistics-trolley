@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/include/lock.h
+/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/include/lock.h
 sys/file.h
 -
 sys/socket.h
@@ -46,9 +46,9 @@ math.h
 lockdev.h
 -
 
-/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
+/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
 lock.h
-/home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.h
+/home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.h
 stdio.h
 -
 unistd.h

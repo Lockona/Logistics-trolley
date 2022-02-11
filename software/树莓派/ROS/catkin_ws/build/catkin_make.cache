@@ -1,2 +1,2 @@
 car:test:ydlidar_ros-X2L
--DCATKIN_DEVEL_PREFIX=/home/kero907/work_space/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kero907/work_space/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/kero/workspace/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/kero/workspace/catkin_ws/install -G Unix Makefiles

@@ -1,4 +1,4 @@
-prefix=/home/kero907/work_space/catkin_ws/devel
+prefix=/home/kero/workspace/catkin_ws/devel
 
 Name: ydlidar
 Description: Description of ydlidar

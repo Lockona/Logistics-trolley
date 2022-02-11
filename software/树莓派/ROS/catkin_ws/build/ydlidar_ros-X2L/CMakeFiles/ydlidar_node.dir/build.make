@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kero907/work_space/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/kero/workspace/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kero907/work_space/catkin_ws/build
+CMAKE_BINARY_DIR = /home/kero/workspace/catkin_ws/build
 
 # Include any dependencies generated for this target.
 include ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/depend.make
@@ -58,108 +58,108 @@ include ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/progress.make
 include ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp > CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp > CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp -o CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/src/ydlidar_node.cpp -o CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/CYdLidar.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/list_ports_linux.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_serial.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/impl/unix/unix_timer.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o   -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o   -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c > CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c > CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c -o CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/lock.c -o CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/serial.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.s
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/flags.make
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o: /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o -c /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o: /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o -c /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.i"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.i
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp > CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.i
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.s"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.s
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L/sdk/src/ydlidar_driver.cpp -o CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.s
 
 # Object files for target ydlidar_node
 ydlidar_node_OBJECTS = \
@@ -175,46 +175,46 @@ ydlidar_node_OBJECTS = \
 # External object files for target ydlidar_node
 ydlidar_node_EXTERNAL_OBJECTS =
 
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/build.make
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libroscpp.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libpthread.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_chrono.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_regex.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librostime.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libcpp_common.so
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_system.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_thread.so.1.71.0
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
-/home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kero907/work_space/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node"
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ydlidar_node.dir/link.txt --verbose=$(VERBOSE)
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/src/ydlidar_node.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/CYdLidar.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/list_ports_linux.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_serial.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/impl/unix/unix_timer.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/lock.c.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/serial.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/sdk/src/ydlidar_driver.cpp.o
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/build.make
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libroscpp.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libpthread.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_chrono.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_regex.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/librostime.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /opt/ros/noetic/lib/libcpp_common.so
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_system.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libboost_thread.so.1.71.0
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
+/home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node: ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kero/workspace/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable /home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node"
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ydlidar_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/build: /home/kero907/work_space/catkin_ws/devel/lib/ydlidar/ydlidar_node
+ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/build: /home/kero/workspace/catkin_ws/devel/lib/ydlidar/ydlidar_node
 
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/build
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/clean:
-	cd /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/ydlidar_node.dir/cmake_clean.cmake
+	cd /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L && $(CMAKE_COMMAND) -P CMakeFiles/ydlidar_node.dir/cmake_clean.cmake
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/clean
 
 ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/depend:
-	cd /home/kero907/work_space/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kero907/work_space/catkin_ws/src /home/kero907/work_space/catkin_ws/src/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L /home/kero907/work_space/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kero/workspace/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kero/workspace/catkin_ws/src /home/kero/workspace/catkin_ws/src/ydlidar_ros-X2L /home/kero/workspace/catkin_ws/build /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L /home/kero/workspace/catkin_ws/build/ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ydlidar_ros-X2L/CMakeFiles/ydlidar_node.dir/depend
 

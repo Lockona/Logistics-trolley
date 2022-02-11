@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/kero907/work_space/catkin_ws/devel/lib/test/client"
-  "/home/kero907/work_space/catkin_ws/devel/lib/test/client.pdb"
+  "/home/kero/workspace/catkin_ws/devel/lib/test/client"
+  "/home/kero/workspace/catkin_ws/devel/lib/test/client.pdb"
   "CMakeFiles/client.dir/src/client.cpp.o"
   "CMakeFiles/client.dir/src/serial_port.cpp.o"
 )

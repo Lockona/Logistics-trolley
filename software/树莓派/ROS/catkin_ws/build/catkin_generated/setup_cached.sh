@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/kero907/work_space/catkin_ws/build'
+export PWD='/home/kero/workspace/catkin_ws/build'
